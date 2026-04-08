@@ -1,57 +1,57 @@
 # e-URDF-Zoo 🦾
 
-🌐 **English** | [中文](./README.zh.md)
+[English](./README.md) | **中文**
 
-> **The Official Device Driver Hub for ROSClaw** - Where robots meet AI semantics.
+> **ROSClaw 官方设备驱动中心** - 机器人与 AI 语义相遇的地方。
 
 [![ROSClaw](https://img.shields.io/badge/ROSClaw-Ecosystem-blue)](https://github.com/ros-claw)
 [![MuJoCo](https://img.shields.io/badge/MuJoCo-Menagerie-green)](https://github.com/google-deepmind/mujoco_menagerie)
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](LICENSE)
 
-## Vision
+## 愿景
 
-DeepMind's `mujoco_menagerie` is excellent, but it's purely physical. LLMs don't understand pure physics - they need **semantics and rules**.
+DeepMind 的 `mujoco_menagerie` 非常出色，但它纯粹是物理的。LLM 不理解纯物理 - 它们需要**语义和规则**。
 
-**e-URDF-Zoo** bridges the gap by adding:
-- 🧠 **Semantic descriptors** - What can this robot do?
-- 🛡️ **Safety firewalls** - What are the physical limits?
-- 💬 **LLM prompts** - How should AI agents control this robot?
+**e-URDF-Zoo** 通过添加以下内容来弥合差距:
+- 🧠 **语义描述符** - 这个机器人能做什么？
+- 🛡️ **安全防火墙** - 物理限制是什么？
+- 💬 **LLM 提示词** - AI 代理应该如何控制这个机器人？
 
-## The "Embodiment Asset Bundle"
+## "具身资产包"
 
-Each robot in the Zoo is a complete, self-describing package:
+Zoo 中的每个机器人都是一个完整的、自描述的包:
 
 ```
 robots/universal_robots_ur5e/
-├── model.xml          # Physical base: MuJoCo model from Menagerie
-├── e_urdf.json        # Robot soul: Safety, semantics, perception
+├── model.xml          # 物理基础: 来自 Menagerie 的 MuJoCo 模型
+├── e_urdf.json        # 机器人灵魂: 安全、语义、感知
 └── prompts/
-    ├── system.md      # LLM role definition
-    └── tools_usage.md # MCP tool usage guide
+    ├── system.md      # LLM 角色定义
+    └── tools_usage.md # MCP 工具使用指南
 ```
 
-## Quick Start
+## 快速开始
 
-### Install
+### 安装
 
 ```bash
-# Clone the repository
+# 克隆仓库
 git clone https://github.com/ros-claw/e-urdf-zoo.git
 cd e-urdf-zoo
 
-# Install dependencies
+# 安装依赖
 pip install -e .
 ```
 
-### Load a Robot
+### 加载机器人
 
 ```python
 from e_urdf_zoo import load_embodiment
 
-# Load UR5e with all safety configs
+# 加载带所有安全配置的 UR5e
 ur5e = load_embodiment("universal_robots/ur5e")
 
-# Use with mjlab-mcp-server
+# 与 mjlab-mcp-server 一起使用
 from mjlab_mcp_server import PhysicsSandbox
 
 sandbox = PhysicsSandbox(
@@ -60,53 +60,53 @@ sandbox = PhysicsSandbox(
 )
 ```
 
-## Supported Robots
+## 支持的机器人
 
-| Robot | Type | Status | Safety Level |
+| 机器人 | 类型 | 状态 | 安全级别 |
 |-------|------|--------|--------------|
-| [UR5e](./robots/universal_robots_ur5e/) | Collaborative Arm | ✅ Ready | Dynamic |
-| [Unitree G1](./robots/unitree_g1/) | Humanoid | ✅ Ready | ZMP Balance |
+| [UR5e](./robots/universal_robots_ur5e/) | 协作机械臂 | ✅ Ready | Dynamic |
+| [Unitree G1](./robots/unitree_g1/) | 人形机器人 | ✅ Ready | ZMP 平衡 |
 
-## Contributing Your Robot
+## 贡献您的机器人
 
-We use AI to automate hardware integration!
+我们使用 AI 来自动化硬件集成！
 
 ```bash
-# Convert your robot to e-URDF format
+# 将您的机器人转换为 e-URDF 格式
 sdk_to_mcp generate \
   --urdf ./my_robot.urdf \
   --sdk_docs ./manual.pdf \
   --output ./robots/my_robot/
 ```
 
-The AI will automatically:
-1. Extract joint limits and physical parameters
-2. Generate `e_urdf.json` with safety thresholds
-3. Write optimal LLM prompts for your specific hardware
+AI 将自动:
+1. 提取关节限制和物理参数
+2. 生成带安全阈值的 `e_urdf.json`
+3. 为您的特定硬件编写最优的 LLM 提示词
 
-## Architecture
+## 架构
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    LLM Agent (Claude/OpenClaw)               │
 └─────────────────────────┬───────────────────────────────────┘
-                          │ MCP Protocol
+                          │ MCP 协议
 ┌─────────────────────────▼───────────────────────────────────┐
-│              mjlab-mcp-server (Subconscious)                 │
+│              mjlab-mcp-server (潜意识)                        │
 │  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐   │
-│  │ e-urdf-zoo   │───▶│   MuJoCo     │───▶│  Safety      │   │
-│  │  Assets      │    │ Simulation   │    │  Validation  │   │
+│  │ e-urdf-zoo   │───▶│   MuJoCo     │───▶│  安全        │   │
+│  │  资产        │    │ 仿真         │    │  验证        │   │
 │  └──────────────┘    └──────────────┘    └──────────────┘   │
 └─────────────────────────┬───────────────────────────────────┘
                           │ ROS 2 / DDS
 ┌─────────────────────────▼───────────────────────────────────┐
-│                    Physical Robot Hardware                   │
+│                    物理机器人硬件                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-## Integration with ROSClaw
+## 与 ROSClaw 集成
 
-The `e_urdf.json` files are exposed as MCP Resources:
+`e_urdf.json` 文件作为 MCP 资源暴露:
 
 ```json
 {
@@ -123,25 +123,25 @@ The `e_urdf.json` files are exposed as MCP Resources:
 }
 ```
 
-## The "Subconscious" Flow
+## "潜意识"流程
 
-1. **Mount**: Load robot from e-urdf-zoo into memory
-2. **Simulate**: LLM generates action → `move_to(target)`
-3. **Intercept**: Don't send to hardware yet!
-4. **Validate**: Run 100x speed physics simulation
-   - Collision? → `[FIREWALL] Collision at t=1.2s`
-   - Torque overload? → `[FIREWALL] Reduce acceleration`
-5. **Release**: Only if `SIM PASS` → forward to ROS 2
+1. **挂载**: 从 e-urdf-zoo 加载机器人到内存
+2. **仿真**: LLM 生成动作 → `move_to(target)`
+3. **拦截**: 不要立即发送到硬件！
+4. **验证**: 以 100 倍速度运行物理仿真
+   - 碰撞？ → `[FIREWALL] t=1.2s 碰撞`
+   - 扭矩过载？ → `[FIREWALL] 降低加速度`
+5. **释放**: 仅当 `SIM PASS` → 转发到 ROS 2
 
-## License
+## 许可证
 
 Apache 2.0 - See [LICENSE](LICENSE)
 
-## Acknowledgments
+## 致谢
 
-- [MuJoCo Menagerie](https://github.com/google-deepmind/mujoco_menagerie) - Physical models base
-- [ROSClaw](https://github.com/ros-claw) - Embodied Intelligence OS
+- [MuJoCo Menagerie](https://github.com/google-deepmind/mujoco_menagerie) - 物理模型基础
+- [ROSClaw](https://github.com/ros-claw) - 具身智能操作系统
 
 ---
 
-**Part of the ROSClaw Embodied Intelligence Operating System**
+**ROSClaw 具身智能操作系统的一部分**
