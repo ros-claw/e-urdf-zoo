@@ -1,0 +1,71 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "e-urdf-zoo"
+version = "0.1.0"
+description = "The Official Device Driver Hub for ROSClaw - Semantic Robot Models for AI Agents"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+authors = [
+    {name = "ROSClaw Team", email = "rosclaw@github.com"},
+]
+keywords = ["robotics", "mujoco", "mcp", "llm", "embodied-ai", "rosclaw"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "mujoco>=3.0.0",
+    "numpy>=1.24.0",
+    "pyyaml>=6.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+]
+
+[project.scripts]
+e-urdf-zoo = "e_urdf_zoo.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ros-claw/e-urdf-zoo"
+Documentation = "https://github.com/ros-claw/e-urdf-zoo#readme"
+Repository = "https://github.com/ros-claw/e-urdf-zoo"
+Issues = "https://github.com/ros-claw/e-urdf-zoo/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/e_urdf_zoo"]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "I", "N", "D", "UP", "B", "C4", "SIM"]
+ignore = ["D100", "D104", "D107"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_configs = true

@@ -1,0 +1,14 @@
+<!--
+  UR5e Physical Model Reference
+
+  This is a reference file pointing to the official MuJoCo Menagerie model.
+  The actual model is loaded from the menagerie at runtime.
+
+  Model Source: https://github.com/google-deepmind/mujoco_menagerie
+  Path: universal_robots_ur5e/ur5e.xml
+
+  License: Apache 2.0 (same as MuJoCo Menagerie)
+-->
+<mujoco model="ur5e_reference">
+  <include file="../../../../mujoco_menagerie/universal_robots_ur5e/ur5e.xml"/>
+</mujoco>

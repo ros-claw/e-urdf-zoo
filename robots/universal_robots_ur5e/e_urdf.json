@@ -1,0 +1,227 @@
+{
+  "embodiment_id": "ur5e_v1",
+  "embodiment_name": "UR5e Collaborative Robotic Arm",
+  "version": "1.0.0",
+  "meta": {
+    "manufacturer": "Universal Robots",
+    "model": "UR5e",
+    "description": "6-DOF collaborative industrial arm designed for human-robot interaction with force-sensitive safety systems.",
+    "url": "https://www.universal-robots.com/products/ur5e/",
+    "tags": ["collaborative", "industrial", "6-dof", "pick-and-place", "assembly"],
+    "difficulty": "intermediate",
+    "release_date": "2018-06"
+  },
+  "kinematics": {
+    "base_frame": "base_link",
+    "tcp_frame": "wrist_3_link",
+    "attachment_site": "attachment_site",
+    "dof": 6,
+    "joint_topology": "serial",
+    "workspace_type": "cylindrical"
+  },
+  "joints": {
+    "names": [
+      "shoulder_pan_joint",
+      "shoulder_lift_joint",
+      "elbow_joint",
+      "wrist_1_joint",
+      "wrist_2_joint",
+      "wrist_3_joint"
+    ],
+    "types": ["revolute", "revolute", "revolute", "revolute", "revolute", "revolute"],
+    "limits": {
+      "position_rad": {
+        "shoulder_pan_joint": [-6.28319, 6.28319],
+        "shoulder_lift_joint": [-6.28319, 6.28319],
+        "elbow_joint": [-6.28319, 6.28319],
+        "wrist_1_joint": [-6.28319, 6.28319],
+        "wrist_2_joint": [-6.28319, 6.28319],
+        "wrist_3_joint": [-6.28319, 6.28319]
+      },
+      "velocity_rad_s": {
+        "shoulder_pan_joint": 3.15,
+        "shoulder_lift_joint": 3.15,
+        "elbow_joint": 3.15,
+        "wrist_1_joint": 6.28,
+        "wrist_2_joint": 6.28,
+        "wrist_3_joint": 6.28
+      },
+      "torque_nm": {
+        "shoulder_pan_joint": 150.0,
+        "shoulder_lift_joint": 150.0,
+        "elbow_joint": 150.0,
+        "wrist_1_joint": 28.0,
+        "wrist_2_joint": 28.0,
+        "wrist_3_joint": 28.0
+      }
+    },
+    "axis": [
+      [0, 0, 1],
+      [0, 1, 0],
+      [0, 1, 0],
+      [0, 1, 0],
+      [0, 0, 1],
+      [0, 1, 0]
+    ],
+    "parent_link": [
+      "base_link",
+      "shoulder_link",
+      "upper_arm_link",
+      "forearm_link",
+      "wrist_1_link",
+      "wrist_2_link"
+    ],
+    "child_link": [
+      "shoulder_link",
+      "upper_arm_link",
+      "forearm_link",
+      "wrist_1_link",
+      "wrist_2_link",
+      "wrist_3_link"
+    ]
+  },
+  "links": {
+    "names": [
+      "base_link",
+      "shoulder_link",
+      "upper_arm_link",
+      "forearm_link",
+      "wrist_1_link",
+      "wrist_2_link",
+      "wrist_3_link"
+    ],
+    "collision_geoms": [
+      "base_collision",
+      "shoulder_collision",
+      "upper_arm_collision",
+      "forearm_collision",
+      "wrist_1_collision",
+      "wrist_2_collision",
+      "wrist_3_collision"
+    ]
+  },
+  "semantics": {
+    "robot_type": "collaborative_arm",
+    "affordances": [
+      "grasping",
+      "pushing",
+      "insertion",
+      "assembly",
+      "polishing",
+      "welding",
+      "dispensing"
+    ],
+    "end_effector_capabilities": [
+      "gripper_2f",
+      "gripper_3f",
+      "vacuum",
+      "welding_torch",
+      "camera_mount"
+    ],
+    "typical_payload_kg": 5.0,
+    "max_payload_kg": 5.0,
+    "reach_m": 0.85,
+    "repeatability_mm": 0.03,
+    "mounting_options": ["floor", "ceiling", "wall"],
+    "human_collaboration": {
+      "force_limiting": true,
+      "speed_reduced_mode": true,
+      "safety_rated_monitored_stop": true
+    }
+  },
+  "observation_space": {
+    "proprioception": {
+      "joint_positions": true,
+      "joint_velocities": true,
+      "joint_torques": true,
+      "tcp_pose": true,
+      "tcp_twist": true
+    },
+    "exteroception": {
+      "force_torque_sensor": {
+        "location": "tcp",
+        "enabled": true,
+        "max_force_n": 200.0,
+        "max_torque_nm": 10.0
+      },
+      "cameras": [
+        {
+          "name": "wrist_camera",
+          "location": "wrist_3_link",
+          "type": "rgbd",
+          "resolution": [640, 480],
+          "fov_deg": 60,
+          "optional": true
+        }
+      ]
+    }
+  },
+  "action_space": {
+    "control_modes": [
+      "joint_position",
+      "joint_velocity",
+      "cartesian_pose",
+      "cartesian_twist"
+    ],
+    "default_control_mode": "joint_position",
+    "command_rate_hz": 125,
+    "smoothing_filter": true
+  },
+  "physical_firewall": {
+    "engine": "mujoco",
+    "validation_level": "dynamic_stability",
+    "mjlab_validation_required": true,
+    "max_simulation_horizon_sec": 2.0,
+    "speed_up_factor": 100,
+    "constraints": {
+      "self_collision": false,
+      "environment_collision": true,
+      "joint_position_limits": true,
+      "joint_velocity_limits": true,
+      "joint_torque_limits": true,
+      "tcp_force_limits": true,
+      "singularity_avoidance": true
+    },
+    "safety_margins": {
+      "joint_position": 0.05,
+      "joint_velocity": 0.1,
+      "joint_torque": 0.1,
+      "tcp_force": 0.1
+    },
+    "excluded_collision_pairs": [
+      ["base_link", "shoulder_link"],
+      ["shoulder_link", "upper_arm_link"],
+      ["upper_arm_link", "forearm_link"],
+      ["forearm_link", "wrist_1_link"],
+      ["wrist_1_link", "wrist_2_link"],
+      ["wrist_2_link", "wrist_3_link"]
+    ],
+    "zmp_stability_check": false,
+    "balance_check": false
+  },
+  "operational_limits": {
+    "max_linear_velocity_m_s": 1.0,
+    "max_angular_velocity_rad_s": 2.0,
+    "max_linear_acceleration_m_s2": 3.0,
+    "max_angular_acceleration_rad_s2": 6.0
+  },
+  "mcp_server_config": {
+    "tools": [
+      "verify_action_safety",
+      "get_model_info",
+      "get_joint_limits",
+      "simulate_trajectory",
+      "check_collision_free"
+    ],
+    "resources": [
+      "e_urdf://ur5e/kinematics",
+      "e_urdf://ur5e/safety_limits",
+      "e_urdf://ur5e/operational_envelope"
+    ]
+  },
+  "sdk_mappings": {
+    "ros2_driver": "Universal_Robots_ROS2_Driver",
+    "rtde_driver": "ur_rtde",
+    "python_sdk": "urx"
+  }
+}

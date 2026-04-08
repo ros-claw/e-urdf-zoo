@@ -1,0 +1,243 @@
+{
+  "embodiment_id": "g1_v1",
+  "embodiment_name": "Unitree G1 Humanoid Robot",
+  "version": "1.0.0",
+  "meta": {
+    "manufacturer": "Unitree",
+    "model": "G1",
+    "description": "23-DOF torque-controlled humanoid robot designed for general-purpose tasks, locomotion, and human-robot interaction.",
+    "url": "https://www.unitree.com/products/g1",
+    "tags": ["humanoid", "bipedal", "locomotion", "torque-control", "general-purpose"],
+    "difficulty": "advanced",
+    "release_date": "2024-03"
+  },
+  "kinematics": {
+    "base_frame": "pelvis",
+    "floating_base": true,
+    "dof": 23,
+    "dof_actuated": 23,
+    "joint_topology": "humanoid_tree",
+    "workspace_type": "omnidirectional"
+  },
+  "joints": {
+    "leg": {
+      "left": [
+        "left_hip_pitch_joint",
+        "left_hip_roll_joint",
+        "left_hip_yaw_joint",
+        "left_knee_joint",
+        "left_ankle_pitch_joint",
+        "left_ankle_roll_joint"
+      ],
+      "right": [
+        "right_hip_pitch_joint",
+        "right_hip_roll_joint",
+        "right_hip_yaw_joint",
+        "right_knee_joint",
+        "right_ankle_pitch_joint",
+        "right_ankle_roll_joint"
+      ]
+    },
+    "arm": {
+      "left": [
+        "left_shoulder_pitch_joint",
+        "left_shoulder_roll_joint",
+        "left_shoulder_yaw_joint",
+        "left_elbow_joint",
+        "left_wrist_roll_joint"
+      ],
+      "right": [
+        "right_shoulder_pitch_joint",
+        "right_shoulder_roll_joint",
+        "right_shoulder_yaw_joint",
+        "right_elbow_joint",
+        "right_wrist_roll_joint"
+      ]
+    },
+    "torso": ["waist_yaw_joint", "waist_roll_joint", "waist_pitch_joint"],
+    "head": ["head_yaw_joint", "head_pitch_joint"],
+    "limits": {
+      "position_rad": {
+        "left_hip_pitch_joint": [-2.5, 2.5],
+        "left_hip_roll_joint": [-0.87, 0.87],
+        "left_hip_yaw_joint": [-1.5, 1.5],
+        "left_knee_joint": [-2.8, 0.0],
+        "left_ankle_pitch_joint": [-1.0, 1.0],
+        "left_ankle_roll_joint": [-0.5, 0.5],
+        "right_hip_pitch_joint": [-2.5, 2.5],
+        "right_hip_roll_joint": [-0.87, 0.87],
+        "right_hip_yaw_joint": [-1.5, 1.5],
+        "right_knee_joint": [-2.8, 0.0],
+        "right_ankle_pitch_joint": [-1.0, 1.0],
+        "right_ankle_roll_joint": [-0.5, 0.5],
+        "waist_yaw_joint": [-1.5, 1.5],
+        "waist_roll_joint": [-0.5, 0.5],
+        "waist_pitch_joint": [-1.0, 1.0],
+        "left_shoulder_pitch_joint": [-3.14, 3.14],
+        "left_shoulder_roll_joint": [-1.0, 3.14],
+        "left_shoulder_yaw_joint": [-2.0, 2.0],
+        "left_elbow_joint": [-2.5, 0.0],
+        "left_wrist_roll_joint": [-1.5, 1.5],
+        "right_shoulder_pitch_joint": [-3.14, 3.14],
+        "right_shoulder_roll_joint": [-3.14, 1.0],
+        "right_shoulder_yaw_joint": [-2.0, 2.0],
+        "right_elbow_joint": [-2.5, 0.0],
+        "right_wrist_roll_joint": [-1.5, 1.5],
+        "head_yaw_joint": [-2.5, 2.5],
+        "head_pitch_joint": [-0.5, 0.5]
+      }
+    }
+  },
+  "links": {
+    "names": [
+      "pelvis",
+      "left_hip_link", "left_thigh_link", "left_calf_link", "left_foot_link",
+      "right_hip_link", "right_thigh_link", "right_calf_link", "right_foot_link",
+      "torso_link",
+      "left_shoulder_link", "left_upper_arm_link", "left_forearm_link", "left_hand_link",
+      "right_shoulder_link", "right_upper_arm_link", "right_forearm_link", "right_hand_link",
+      "head_link"
+    ],
+    "critical_for_balance": ["pelvis", "left_foot_link", "right_foot_link"]
+  },
+  "semantics": {
+    "robot_type": "humanoid",
+    "affordances": [
+      "bipedal_locomotion",
+      "walking",
+      "standing",
+      "sitting",
+      "reaching",
+      "grasping",
+      "manipulation",
+      "waving",
+      "balancing",
+      "stepping_over",
+      "climbing_stairs"
+    ],
+    "end_effector_capabilities": [
+      "parallel_gripper",
+      "dexterous_hand",
+      "tool_attachment"
+    ],
+    "typical_payload_kg": 2.0,
+    "max_payload_kg": 3.0,
+    "height_m": 1.27,
+    "weight_kg": 35.0,
+    "walking_speed_m_s": 1.5,
+    "battery_life_hours": 2.0,
+    "mounting_options": ["self_standing"],
+    "human_collaboration": {
+      "force_limiting": true,
+      "compliant_control": true,
+      "safety_rated_monitored_stop": false
+    }
+  },
+  "observation_space": {
+    "proprioception": {
+      "joint_positions": true,
+      "joint_velocities": true,
+      "joint_torques": true,
+      "base_imu": {
+        "accelerometer": true,
+        "gyroscope": true,
+        "orientation": true
+      },
+      "foot_force_sensors": {
+        "left": true,
+        "right": true
+      }
+    },
+    "exteroception": {
+      "cameras": [
+        {
+          "name": "head_camera",
+          "location": "head_link",
+          "type": "rgb",
+          "resolution": [1920, 1080],
+          "fov_deg": 120,
+          "optional": false
+        },
+        {
+          "name": "depth_camera",
+          "location": "head_link",
+          "type": "depth",
+          "resolution": [640, 480],
+          "fov_deg": 90,
+          "optional": true
+        }
+      ],
+      "lidar": {
+        "enabled": false,
+        "optional": true
+      }
+    }
+  },
+  "action_space": {
+    "control_modes": ["joint_position", "joint_velocity", "joint_torque"],
+    "default_control_mode": "joint_position",
+    "command_rate_hz": 100,
+    "smoothing_filter": true
+  },
+  "physical_firewall": {
+    "engine": "mujoco",
+    "validation_level": "full_humanoid",
+    "mjlab_validation_required": true,
+    "max_simulation_horizon_sec": 3.0,
+    "speed_up_factor": 100,
+    "constraints": {
+      "self_collision": true,
+      "environment_collision": true,
+      "joint_position_limits": true,
+      "joint_velocity_limits": true,
+      "joint_torque_limits": true,
+      "zmp_stability": true,
+      "foot_contact": true,
+      "balance_check": true,
+      "singularity_avoidance": false
+    },
+    "safety_margins": {
+      "joint_position": 0.1,
+      "joint_velocity": 0.15,
+      "joint_torque": 0.1,
+      "zmp_margin_m": 0.02
+    },
+    "balance_params": {
+      "zmp_check_enabled": true,
+      "min_foot_contact_force_n": 10.0,
+      "max_tilt_angle_deg": 15.0,
+      "emergency_fall_detection": true
+    },
+    "zmp_stability_check": true,
+    "fall_detection": {
+      "enabled": true,
+      "pelvis_height_threshold_m": 0.4,
+      "max_angular_velocity_deg_s": 30.0
+    }
+  },
+  "operational_limits": {
+    "max_joint_velocity_rad_s": 10.0,
+    "max_joint_torque_nm": 50.0,
+    "max_linear_acceleration_m_s2": 5.0,
+    "max_angular_acceleration_rad_s2": 10.0
+  },
+  "mcp_server_config": {
+    "tools": [
+      "verify_action_safety",
+      "get_model_info",
+      "get_joint_limits",
+      "simulate_trajectory",
+      "check_balance_stability",
+      "check_fall_risk"
+    ],
+    "resources": [
+      "e_urdf://g1/kinematics",
+      "e_urdf://g1/balance_params",
+      "e_urdf://g1/operational_envelope"
+    ]
+  },
+  "sdk_mappings": {
+    "dds_driver": "rosclaw-g1-dds-mcp",
+    "python_sdk": "unitree_sdk2_python"
+  }
+}
