@@ -1,0 +1,4 @@
+<mujoco model="skydio_x2_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/skydio_x2/scene.xml"/>
+</mujoco>

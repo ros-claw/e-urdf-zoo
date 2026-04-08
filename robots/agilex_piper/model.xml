@@ -1,0 +1,4 @@
+<mujoco model="agilex_piper_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/agilex_piper/piper.xml"/>
+</mujoco>

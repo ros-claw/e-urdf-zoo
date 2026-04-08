@@ -1,14 +1,4 @@
-<!--
-  Unitree G1 Humanoid Physical Model Reference
-
-  This is a reference file pointing to the official MuJoCo Menagerie model.
-  The actual model is loaded from the menagerie at runtime.
-
-  Model Source: https://github.com/google-deepmind/mujoco_menagerie
-  Path: unitree_g1/g1.xml
-
-  License: Apache 2.0 (same as MuJoCo Menagerie)
--->
-<mujoco model="g1_humanoid_reference">
+<mujoco model="unitree_g1_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
   <include file="../../../../mujoco_menagerie/unitree_g1/g1.xml"/>
 </mujoco>

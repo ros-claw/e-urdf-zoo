@@ -1,0 +1,4 @@
+<mujoco model="low_cost_robot_arm_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/low_cost_robot_arm/low_cost_robot_arm.xml"/>
+</mujoco>

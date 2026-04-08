@@ -1,0 +1,4 @@
+<mujoco model="arx_l5_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/arx_l5/arx_l5.xml"/>
+</mujoco>

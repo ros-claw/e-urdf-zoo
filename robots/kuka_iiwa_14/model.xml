@@ -1,0 +1,4 @@
+<mujoco model="kuka_iiwa_14_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/kuka_iiwa_14/iiwa14.xml"/>
+</mujoco>

@@ -1,0 +1,4 @@
+<mujoco model="ufactory_xarm7_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/ufactory_xarm7/hand.xml"/>
+</mujoco>

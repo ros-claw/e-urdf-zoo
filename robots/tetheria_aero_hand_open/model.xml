@@ -1,0 +1,4 @@
+<mujoco model="tetheria_aero_hand_open_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/tetheria_aero_hand_open/left_hand.xml"/>
+</mujoco>

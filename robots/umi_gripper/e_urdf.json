@@ -1,0 +1,84 @@
+{
+  "embodiment_id": "umi_gripper_v1",
+  "embodiment_name": "Umi Gripper",
+  "version": "0.1.0-skeleton",
+  "meta": {
+    "manufacturer": "Unknown",
+    "model": "umi_gripper",
+    "description": "Umi Gripper - a robotic system.",
+    "tags": [
+      "generic",
+      "0-dof",
+      "menagerie-import"
+    ],
+    "difficulty": "intermediate",
+    "imported_from": "mujoco_menagerie",
+    "status": "skeleton",
+    "note": "This is a skeleton configuration. Full semantic description and prompts needed."
+  },
+  "kinematics": {
+    "dof": 0,
+    "joint_topology": "serial",
+    "workspace_type": "cylindrical"
+  },
+  "semantics": {
+    "robot_type": "generic",
+    "affordances": [
+      "motion"
+    ],
+    "difficulty": "intermediate"
+  },
+  "observation_space": {
+    "proprioception": {
+      "joint_positions": true,
+      "joint_velocities": true,
+      "joint_torques": true
+    }
+  },
+  "action_space": {
+    "control_modes": [
+      "joint_position",
+      "joint_velocity"
+    ],
+    "default_control_mode": "joint_position"
+  },
+  "physical_firewall": {
+    "engine": "mujoco",
+    "validation_level": "dynamic_stability",
+    "mjlab_validation_required": true,
+    "max_simulation_horizon_sec": 2.0,
+    "speed_up_factor": 100,
+    "constraints": {
+      "self_collision": false,
+      "environment_collision": true,
+      "joint_position_limits": true,
+      "joint_velocity_limits": true,
+      "joint_torque_limits": true,
+      "zmp_stability_check": false,
+      "balance_check": false
+    },
+    "safety_margins": {
+      "joint_position": 0.05,
+      "joint_velocity": 0.1,
+      "joint_torque": 0.1
+    }
+  },
+  "mcp_server_config": {
+    "tools": [
+      "verify_action_safety",
+      "get_model_info",
+      "get_joint_limits"
+    ],
+    "resources": [
+      "e_urdf://umi_gripper/config"
+    ]
+  },
+  "_todo": [
+    "Add detailed joint limits from Menagerie model",
+    "Add manufacturer information",
+    "Write system.md prompt",
+    "Write tools_usage.md guide",
+    "Add SDK mappings",
+    "Test with mjlab-mcp-server"
+  ]
+}

@@ -1,0 +1,4 @@
+<mujoco model="agility_cassie_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/agility_cassie/cassie.xml"/>
+</mujoco>

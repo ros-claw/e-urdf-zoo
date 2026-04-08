@@ -1,0 +1,4 @@
+<mujoco model="berkeley_humanoid_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/berkeley_humanoid/berkeley_humanoid.xml"/>
+</mujoco>

@@ -1,0 +1,4 @@
+<mujoco model="unitree_a1_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/unitree_a1/a1.xml"/>
+</mujoco>

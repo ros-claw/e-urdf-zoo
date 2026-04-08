@@ -1,0 +1,4 @@
+<mujoco model="bitcraze_crazyflie_2_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/bitcraze_crazyflie_2/cf2.xml"/>
+</mujoco>

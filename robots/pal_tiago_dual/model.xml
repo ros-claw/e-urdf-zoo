@@ -1,0 +1,4 @@
+<mujoco model="pal_tiago_dual_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/pal_tiago_dual/scene_motor.xml"/>
+</mujoco>

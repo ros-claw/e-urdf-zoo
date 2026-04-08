@@ -1,0 +1,4 @@
+<mujoco model="apptronik_apollo_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/apptronik_apollo/apptronik_apollo.xml"/>
+</mujoco>

@@ -1,0 +1,4 @@
+<mujoco model="universal_robots_ur10e_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/universal_robots_ur10e/scene.xml"/>
+</mujoco>

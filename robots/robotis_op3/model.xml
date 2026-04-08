@@ -1,0 +1,4 @@
+<mujoco model="robotis_op3_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/robotis_op3/op3.xml"/>
+</mujoco>

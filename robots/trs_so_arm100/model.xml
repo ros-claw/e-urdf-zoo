@@ -1,0 +1,4 @@
+<mujoco model="trs_so_arm100_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/trs_so_arm100/scene.xml"/>
+</mujoco>

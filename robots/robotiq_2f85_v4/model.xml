@@ -1,0 +1,4 @@
+<mujoco model="robotiq_2f85_v4_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/robotiq_2f85_v4/2f85.xml"/>
+</mujoco>

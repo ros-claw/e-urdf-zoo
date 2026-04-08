@@ -1,0 +1,4 @@
+<mujoco model="robot_soccer_kit_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/robot_soccer_kit/robot_soccer_kit.xml"/>
+</mujoco>

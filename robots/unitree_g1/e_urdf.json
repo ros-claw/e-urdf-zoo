@@ -166,11 +166,7 @@
           "fov_deg": 90,
           "optional": true
         }
-      ],
-      "lidar": {
-        "enabled": false,
-        "optional": true
-      }
+      ]
     }
   },
   "action_space": {

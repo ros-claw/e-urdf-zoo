@@ -54,31 +54,7 @@
         "wrist_2_joint": 28.0,
         "wrist_3_joint": 28.0
       }
-    },
-    "axis": [
-      [0, 0, 1],
-      [0, 1, 0],
-      [0, 1, 0],
-      [0, 1, 0],
-      [0, 0, 1],
-      [0, 1, 0]
-    ],
-    "parent_link": [
-      "base_link",
-      "shoulder_link",
-      "upper_arm_link",
-      "forearm_link",
-      "wrist_1_link",
-      "wrist_2_link"
-    ],
-    "child_link": [
-      "shoulder_link",
-      "upper_arm_link",
-      "forearm_link",
-      "wrist_1_link",
-      "wrist_2_link",
-      "wrist_3_link"
-    ]
+    }
   },
   "links": {
     "names": [
@@ -157,12 +133,7 @@
     }
   },
   "action_space": {
-    "control_modes": [
-      "joint_position",
-      "joint_velocity",
-      "cartesian_pose",
-      "cartesian_twist"
-    ],
+    "control_modes": ["joint_position", "joint_velocity", "cartesian_pose", "cartesian_twist"],
     "default_control_mode": "joint_position",
     "command_rate_hz": 125,
     "smoothing_filter": true

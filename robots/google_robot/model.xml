@@ -1,0 +1,4 @@
+<mujoco model="google_robot_reference">
+  <!-- Reference to MuJoCo Menagerie model -->
+  <include file="../../../../mujoco_menagerie/google_robot/robot.xml"/>
+</mujoco>
