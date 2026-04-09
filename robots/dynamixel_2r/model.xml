@@ -1,4 +1,4 @@
 <mujoco model="dynamixel_2r_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/dynamixel_2r/dynamixel_2r.xml"/>
+  <include file="../../../mujoco_menagerie/dynamixel_2r/dynamixel_2r.xml"/>
 </mujoco>

@@ -1,4 +1,4 @@
 <mujoco model="pal_talos_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/pal_talos/scene_motor.xml"/>
+  <include file="../../../mujoco_menagerie/pal_talos/scene_motor.xml"/>
 </mujoco>

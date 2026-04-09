@@ -1,4 +1,4 @@
 <mujoco model="stanford_tidybot_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/stanford_tidybot/base.xml"/>
+  <include file="../../../mujoco_menagerie/stanford_tidybot/base.xml"/>
 </mujoco>

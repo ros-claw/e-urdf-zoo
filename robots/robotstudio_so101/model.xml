@@ -1,4 +1,4 @@
 <mujoco model="robotstudio_so101_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/robotstudio_so101/scene.xml"/>
+  <include file="../../../mujoco_menagerie/robotstudio_so101/scene.xml"/>
 </mujoco>

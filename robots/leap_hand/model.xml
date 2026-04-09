@@ -1,4 +1,4 @@
 <mujoco model="leap_hand_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/leap_hand/left_hand.xml"/>
+  <include file="../../../mujoco_menagerie/leap_hand/left_hand.xml"/>
 </mujoco>

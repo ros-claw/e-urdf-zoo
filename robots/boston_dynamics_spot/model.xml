@@ -1,4 +1,4 @@
 <mujoco model="boston_dynamics_spot_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/boston_dynamics_spot/scene.xml"/>
+  <include file="../../../mujoco_menagerie/boston_dynamics_spot/scene.xml"/>
 </mujoco>

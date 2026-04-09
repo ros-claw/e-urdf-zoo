@@ -1,4 +1,4 @@
 <mujoco model="shadow_hand_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/shadow_hand/keyframes.xml"/>
+  <include file="../../../mujoco_menagerie/shadow_hand/keyframes.xml"/>
 </mujoco>

@@ -1,4 +1,4 @@
 <mujoco model="flybody_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/flybody/fruitfly.xml"/>
+  <include file="../../../mujoco_menagerie/flybody/fruitfly.xml"/>
 </mujoco>

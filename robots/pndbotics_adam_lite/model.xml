@@ -1,4 +1,4 @@
 <mujoco model="pndbotics_adam_lite_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/pndbotics_adam_lite/adam_lite.xml"/>
+  <include file="../../../mujoco_menagerie/pndbotics_adam_lite/adam_lite.xml"/>
 </mujoco>

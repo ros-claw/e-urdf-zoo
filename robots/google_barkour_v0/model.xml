@@ -1,4 +1,4 @@
 <mujoco model="google_barkour_v0_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/google_barkour_v0/barkour_v0.xml"/>
+  <include file="../../../mujoco_menagerie/google_barkour_v0/barkour_v0.xml"/>
 </mujoco>

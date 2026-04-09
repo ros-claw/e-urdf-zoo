@@ -1,4 +1,4 @@
 <mujoco model="hello_robot_stretch_3_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/hello_robot_stretch_3/scene.xml"/>
+  <include file="../../../mujoco_menagerie/hello_robot_stretch_3/scene.xml"/>
 </mujoco>

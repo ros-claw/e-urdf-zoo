@@ -1,4 +1,4 @@
 <mujoco model="ufactory_lite6_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/ufactory_lite6/lite6.xml"/>
+  <include file="../../../mujoco_menagerie/ufactory_lite6/lite6.xml"/>
 </mujoco>

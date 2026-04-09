@@ -1,4 +1,4 @@
 <mujoco model="trossen_vx300s_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/trossen_vx300s/scene.xml"/>
+  <include file="../../../mujoco_menagerie/trossen_vx300s/scene.xml"/>
 </mujoco>

@@ -1,4 +1,4 @@
 <mujoco model="anybotics_anymal_c_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/anybotics_anymal_c/anymal_c.xml"/>
+  <include file="../../../mujoco_menagerie/anybotics_anymal_c/anymal_c.xml"/>
 </mujoco>

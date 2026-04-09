@@ -1,4 +1,4 @@
 <mujoco model="iit_softfoot_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/iit_softfoot/scene.xml"/>
+  <include file="../../../mujoco_menagerie/iit_softfoot/scene.xml"/>
 </mujoco>

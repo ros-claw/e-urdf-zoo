@@ -1,4 +1,4 @@
 <mujoco model="umi_gripper_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/umi_gripper/scene.xml"/>
+  <include file="../../../mujoco_menagerie/umi_gripper/scene.xml"/>
 </mujoco>

@@ -1,4 +1,4 @@
 <mujoco model="i2rt_yam_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/i2rt_yam/scene.xml"/>
+  <include file="../../../mujoco_menagerie/i2rt_yam/scene.xml"/>
 </mujoco>

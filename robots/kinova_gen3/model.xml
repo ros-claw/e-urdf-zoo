@@ -1,4 +1,4 @@
 <mujoco model="kinova_gen3_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/kinova_gen3/gen3.xml"/>
+  <include file="../../../mujoco_menagerie/kinova_gen3/gen3.xml"/>
 </mujoco>

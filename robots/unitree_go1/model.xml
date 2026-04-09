@@ -1,4 +1,4 @@
 <mujoco model="unitree_go1_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/unitree_go1/go1.xml"/>
+  <include file="../../../mujoco_menagerie/unitree_go1/go1.xml"/>
 </mujoco>

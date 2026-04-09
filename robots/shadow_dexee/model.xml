@@ -1,4 +1,4 @@
 <mujoco model="shadow_dexee_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/shadow_dexee/scene.xml"/>
+  <include file="../../../mujoco_menagerie/shadow_dexee/scene.xml"/>
 </mujoco>

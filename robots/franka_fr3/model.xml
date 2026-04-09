@@ -1,4 +1,4 @@
 <mujoco model="franka_fr3_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/franka_fr3/fr3.xml"/>
+  <include file="../../../mujoco_menagerie/franka_fr3/fr3.xml"/>
 </mujoco>

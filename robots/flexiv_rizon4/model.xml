@@ -1,4 +1,4 @@
 <mujoco model="flexiv_rizon4_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/flexiv_rizon4/flexiv_rizon4.xml"/>
+  <include file="../../../mujoco_menagerie/flexiv_rizon4/flexiv_rizon4.xml"/>
 </mujoco>

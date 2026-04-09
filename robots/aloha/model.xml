@@ -1,4 +1,4 @@
 <mujoco model="aloha_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/aloha/aloha.xml"/>
+  <include file="../../../mujoco_menagerie/aloha/aloha.xml"/>
 </mujoco>

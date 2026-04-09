@@ -1,4 +1,4 @@
 <mujoco model="toddlerbot_2xm_reference">
   <!-- Reference to MuJoCo Menagerie model -->
-  <include file="../../../../mujoco_menagerie/toddlerbot_2xm/scene.xml"/>
+  <include file="../../../mujoco_menagerie/toddlerbot_2xm/scene.xml"/>
 </mujoco>
