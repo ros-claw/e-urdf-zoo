@@ -140,7 +140,7 @@ Apache 2.0 - See [LICENSE](LICENSE)
 ## Acknowledgments
 
 - [MuJoCo Menagerie](https://github.com/google-deepmind/mujoco_menagerie) - Physical models base
-- [ROSClaw](https://github.com/ros-claw) - Embodied Intelligence OS
+- [ROSClaw](https://github.com/ros-claw) - Embodied Intelligence OS ([arXiv paper](https://arxiv.org/pdf/2604.04664))
 
 ---
 
