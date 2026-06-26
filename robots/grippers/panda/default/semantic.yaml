@@ -1,0 +1,29 @@
+schema_version: e_urdf.semantic.v1
+identity:
+  source_urdf: panda_gripper_glb.urdf
+  inferred: 'true'
+frames:
+  root: panda_hand
+groups:
+  base:
+    type: base
+    links: []
+    joints: []
+    source: heuristic
+    confidence: 0.7
+  finger_left:
+    type: finger
+    links:
+    - panda_leftfinger
+    joints: []
+    source: heuristic
+    confidence: 0.6
+  finger_right:
+    type: finger
+    links:
+    - panda_rightfinger
+    joints: []
+    source: heuristic
+    confidence: 0.6
+notes:
+- Semantic groups were inferred from URDF link names.

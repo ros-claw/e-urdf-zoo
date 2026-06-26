@@ -1,0 +1,98 @@
+schema_version: e_urdf.semantic.v1
+identity:
+  source_urdf: inspire_hand_right.urdf
+  inferred: 'true'
+frames:
+  root: base
+groups:
+  palm:
+    type: palm
+    links:
+    - base
+    - hand_base_link
+    - thumb_proximal_base
+    joints: []
+    side: right
+    source: heuristic
+    confidence: 0.7
+  thumb:
+    type: finger
+    links:
+    - thumb_proximal_base
+    - thumb_proximal
+    - thumb_intermediate
+    - thumb_distal
+    - thumb_tip
+    joints:
+    - thumb_proximal_yaw_joint
+    - thumb_proximal_pitch_joint
+    - thumb_intermediate_joint
+    - thumb_distal_joint
+    - thumb_tip_joint
+    side: right
+    roles:
+    - opposable
+    source: heuristic
+    confidence: 0.6
+  index:
+    type: finger
+    links:
+    - index_proximal
+    - index_intermediate
+    - index_tip
+    joints:
+    - index_proximal_joint
+    - index_intermediate_joint
+    - index_tip_joint
+    side: right
+    roles:
+    - index_finger
+    source: heuristic
+    confidence: 0.6
+  middle:
+    type: finger
+    links:
+    - middle_proximal
+    - middle_intermediate
+    - middle_tip
+    joints:
+    - middle_proximal_joint
+    - middle_intermediate_joint
+    - middle_tip_joint
+    side: right
+    roles:
+    - middle_finger
+    source: heuristic
+    confidence: 0.6
+  ring:
+    type: finger
+    links:
+    - ring_proximal
+    - ring_intermediate
+    - ring_tip
+    joints:
+    - ring_proximal_joint
+    - ring_intermediate_joint
+    - ring_tip_joint
+    side: right
+    roles:
+    - ring_finger
+    source: heuristic
+    confidence: 0.6
+  pinky:
+    type: finger
+    links:
+    - pinky_proximal
+    - pinky_intermediate
+    - pinky_tip
+    joints:
+    - pinky_proximal_joint
+    - pinky_intermediate_joint
+    - pinky_tip_joint
+    side: right
+    roles:
+    - pinky_finger
+    source: heuristic
+    confidence: 0.6
+notes:
+- Semantic groups were inferred from URDF link names.

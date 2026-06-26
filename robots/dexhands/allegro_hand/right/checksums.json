@@ -1,0 +1,30 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "calibration_defaults.yaml": "7ba06125b16e6d79e9af93187f4b7ef6df23db251287753f1c94f8d1996ef33b",
+    "capabilities.yaml": "f6e6601576d9f378a8fb8b63d5f4b6341d6c74882aba9b89e3125cd864edc54d",
+    "licenses/NOTICE": "ef5813448f86d1724717d32e3100db44213c4b569f0b89765af287204b60557a",
+    "licenses/THIRD_PARTY.yaml": "5c3f4d704c7cc3de29c79b195d3ce124893b67cae798b1614b868afb71681e41",
+    "manifest.yaml": "29a96f2a1190d1a8c14f01f02e649c743810051057777d657d5a21c5c9e84074",
+    "meshes/raw/collision/link_tip.obj": "cd517fb6f1b4ccec9ef48501b2a41494d700fdf376f37aa6909afcee172e64f4",
+    "meshes/raw/visual/base_link.obj": "6bf8daf270ac7e427ee477515bfcbcee306958e8b2ea8a23ecb7a319c5c8690f",
+    "meshes/raw/visual/link_0.0.obj": "f8ba6316f4fe17e740276b7f28864f53c0296a1d8b0072e98561be1c6f063732",
+    "meshes/raw/visual/link_1.0.obj": "3f379c94cb867d8421db1879d50f4b11d9ddfde0e4c46e25e0a7da41466368ae",
+    "meshes/raw/visual/link_12.0_right.obj": "cd4ed89d517ab35fc1148d50d695672d6720df5e45e931039f14c227ae8a2047",
+    "meshes/raw/visual/link_13.0.obj": "774f0a09ae38e0ce3192cf53063cc39d9c8400096435a4491bac52f25c7012ff",
+    "meshes/raw/visual/link_14.0.obj": "0b5d6e3e2294abb0c046bd2397021877e012fd14ebf899713470f8bdfca32d38",
+    "meshes/raw/visual/link_15.0.obj": "f682074d43e0f3dc08a44eb6a821bf93fff9015b168cb1e75913aaaea4873782",
+    "meshes/raw/visual/link_2.0.obj": "81886acc0097e0872c3ff7004025481a984fd73d9ebe70213693d6d66a713e07",
+    "meshes/raw/visual/link_3.0.obj": "6495c4ed4e0950539c0e6145c3593b065ed0befe5e2802d2fade0d66c840dd72",
+    "meshes/raw/visual/link_tip.obj": "4c1cdca17b218ad9cf912ff2ecc9509bfff35fdc8ca4c58468e8c5e9689d30b7",
+    "model/model.urdf": "e278bc4c22a3eeadb6de972b30a7ee01b7d12f408dce386c26589cdc0370f2d1",
+    "prompts/safety.md": "8b04b77fe03ba523e870725a6c04d8571a10ec18c4743889ce18c5f78f75a65d",
+    "prompts/skill_notes.md": "bfad6f8dd87b6e7b77a6af566a4c4bc77f2e94077776cf985b02c743a373e28c",
+    "prompts/system.md": "715b09230bfb6fa24f7cc39f5401d2c1dd489229e22dad7a42c82b84a416fc4e",
+    "prompts/tools_usage.md": "bff1b3ec9a7be7640cd409a755d478de7c3298385ce35461e5d8335a02efdcf8",
+    "providers.yaml": "b73ca55f99e82dacf73e2212679667d43e6f719f59a00c56f151f9de1f4110f7",
+    "safety.yaml": "ec00d18cdab198da60dafb51838d5b363bc7a2054eda826fb974c0d3604c889f",
+    "sandbox.yaml": "0260210632a6c5094f0896666f08deae544326f83b18cd17b602bde0f0a2f9d2",
+    "semantic.yaml": "102496dc5c82e9eba40dd771de853366975ca3d1e955247e6a23799625541bd5"
+  }
+}

@@ -1,0 +1,48 @@
+schema_version: e_urdf.safety.v1
+safety_status: experimental
+global_policy:
+  real_robot_execution_allowed: false
+  sandbox_required: true
+  provider_required: true
+  calibration_required: true
+  low_speed_first_run_required: true
+  fault_monitor_required: true
+limits:
+  max_joint_velocity_rad_s: 1.0
+  max_joint_acceleration_rad_s2: 2.0
+  max_current_a: 1.0
+  max_force_n: 10.0
+runtime_monitors:
+  watch_current: true
+  watch_position_bounds: true
+  watch_velocity_bounds: true
+  watch_force: true
+  emergency_stop_on_fault: true
+trajectory_policy:
+  require_sandbox_first: true
+  require_low_speed_first: true
+  require_per_pose_validation: true
+  max_waypoints_without_human_confirmation: 1
+blocked_actions:
+- id: fast_full_close
+  reason: Risk of motor overload and collision damage
+  scope:
+  - real_robot
+  - sandbox
+- id: forceful_grasp_without_current_limit
+  reason: Grasping without active current/torque limit is forbidden
+  scope:
+  - real_robot
+  - sandbox
+- id: uncalibrated_real_execution
+  reason: Real robot execution requires clearance calibration
+  scope:
+  - real_robot
+first_real_robot_protocol:
+  required: true
+  steps:
+  - Complete sandbox-only validation
+  - Upload clearance calibration
+  - Run low-speed range-of-motion check
+  - Enable current/torque monitors
+  - Human-in-the-loop confirmation per pose

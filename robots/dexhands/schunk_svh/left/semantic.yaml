@@ -1,0 +1,51 @@
+schema_version: e_urdf.semantic.v1
+identity:
+  source_urdf: schunk_svh_hand_left.urdf
+  inferred: 'true'
+frames:
+  root: base_link
+groups:
+  palm:
+    type: palm
+    links:
+    - base_link
+    - left_hand_base_link
+    joints: []
+    side: left
+    source: heuristic
+    confidence: 0.7
+  other:
+    type: other
+    links:
+    - left_hand_e1
+    - left_hand_e2
+    - left_hand_z
+    - left_hand_a
+    - left_hand_b
+    - left_hand_c
+    - left_hand_virtual_l
+    - left_hand_l
+    - left_hand_p
+    - left_hand_t
+    - left_hand_virtual_k
+    - left_hand_k
+    - left_hand_o
+    - left_hand_s
+    - left_hand_virtual_j
+    - left_hand_j
+    - left_hand_n
+    - left_hand_r
+    - left_hand_virtual_i
+    - left_hand_i
+    - left_hand_m
+    - left_hand_q
+    - thtip
+    - fftip
+    - mftip
+    - rftip
+    - lftip
+    joints: []
+    source: heuristic
+    confidence: 0.5
+notes:
+- Semantic groups were inferred from URDF link names.

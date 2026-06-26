@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""
-ROSClaw: Spear (sdk_to_mcp) and Shield (mjlab-mcp-server) Demo
+"""ROSClaw: Spear (sdk_to_mcp) and Shield (mjlab-mcp-server) Demo
 
 This script demonstrates the complete workflow:
 1. Spear (sdk_to_mcp): Convert robot SDK to MCP server
@@ -40,8 +39,7 @@ def print_step(step_num: int, title: str) -> None:
 
 
 def demo_step_1_sdk_to_mcp() -> Path:
-    """
-    Step 1: Use sdk_to_mcp (Spear) to convert robot SDK to MCP Asset Bundle.
+    """Step 1: Use sdk_to_mcp (Spear) to convert robot SDK to MCP Asset Bundle.
 
     This demonstrates the Self-Healing Generator creating a valid MCP server
     from a hypothetical robot SDK.
@@ -52,8 +50,8 @@ def demo_step_1_sdk_to_mcp() -> Path:
     sys.path.insert(0, str(Path(__file__).parent.parent / "sdk_to_mcp"))
 
     from sdk_to_mcp_core import (
-        SDKMetadata,
         CommunicationProtocol,
+        SDKMetadata,
         SDKToMCPTransformer,
     )
 
@@ -135,7 +133,7 @@ if __name__ == "__main__":
 
     bundle = result["bundle"]
 
-    print(f"✅ Asset Bundle generated!")
+    print("✅ Asset Bundle generated!")
     print(f"   📦 Robot ID: {bundle.robot_id}")
     print(f"   🤖 Name: {bundle.robot_name}")
     print(f"   📝 Files created: {len(result['files'])}")
@@ -154,8 +152,7 @@ if __name__ == "__main__":
 
 
 def demo_step_2_load_in_firewall(bundle_dir: Path) -> None:
-    """
-    Step 2: Load the generated embodiment in mjlab-mcp-server (Shield).
+    """Step 2: Load the generated embodiment in mjlab-mcp-server (Shield).
 
     This demonstrates how the physics firewall loads the Asset Bundle
     and prepares for safety validation.
@@ -166,7 +163,7 @@ def demo_step_2_load_in_firewall(bundle_dir: Path) -> None:
     e_urdf_path = bundle_dir / "e_urdf.json"
     if e_urdf_path.exists():
         config = json.loads(e_urdf_path.read_text())
-        print(f"📋 Loaded e_urdf.json:")
+        print("📋 Loaded e_urdf.json:")
         print(f"   🔖 Embodiment ID: {config.get('embodiment_id')}")
         print(f"   📛 Name: {config.get('embodiment_name')}")
         print(f"   ⚙️  DOF: {config.get('kinematics', {}).get('dof')}")
@@ -190,8 +187,7 @@ def demo_step_2_load_in_firewall(bundle_dir: Path) -> None:
 
 
 def demo_step_3_trajectory_validation() -> None:
-    """
-    Step 3: Demonstrate trajectory validation with semantic errors.
+    """Step 3: Demonstrate trajectory validation with semantic errors.
 
     This shows how the firewall blocks dangerous trajectories
     and provides human-readable error messages.
@@ -237,8 +233,7 @@ def demo_step_3_trajectory_validation() -> None:
 
 
 def demo_step_4_reality_sync() -> None:
-    """
-    Step 4: Demonstrate Reality-to-Sim Sync.
+    """Step 4: Demonstrate Reality-to-Sim Sync.
 
     Shows how the simulation starts from the real robot's current state.
     """
@@ -249,7 +244,7 @@ def demo_step_4_reality_sync() -> None:
 
     # Simulate real robot state
     real_joints = [0.1, -0.8, 1.5, -0.2, 0.9, 0.0]
-    print(f"📊 Real robot joint positions:")
+    print("📊 Real robot joint positions:")
     for i, pos in enumerate(real_joints):
         print(f"   Joint {i}: {pos:.4f} rad")
     print()

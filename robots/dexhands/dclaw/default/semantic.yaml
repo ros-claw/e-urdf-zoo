@@ -1,0 +1,36 @@
+schema_version: e_urdf.semantic.v1
+identity:
+  source_urdf: dclaw_gripper.urdf
+  inferred: 'true'
+frames:
+  root: base
+groups:
+  palm:
+    type: palm
+    links:
+    - base
+    - base_link
+    joints: []
+    side: null
+    source: heuristic
+    confidence: 0.7
+  other:
+    type: other
+    links:
+    - link_f1_1
+    - link_f1_2
+    - link_f1_3
+    - link_f2_1
+    - link_f2_2
+    - link_f2_3
+    - link_f3_1
+    - link_f3_2
+    - link_f3_3
+    - link_f1_head
+    - link_f2_head
+    - link_f3_head
+    joints: []
+    source: heuristic
+    confidence: 0.5
+notes:
+- Semantic groups were inferred from URDF link names.

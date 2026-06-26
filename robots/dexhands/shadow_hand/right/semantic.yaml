@@ -1,0 +1,64 @@
+schema_version: e_urdf.semantic.v1
+identity:
+  source_urdf: shadow_hand_right.urdf
+  inferred: 'true'
+frames:
+  root: world
+groups:
+  palm:
+    type: palm
+    links:
+    - wrist
+    - palm
+    - thbase
+    joints: []
+    side: right
+    source: heuristic
+    confidence: 0.7
+  middle:
+    type: finger
+    links:
+    - ffmiddle
+    - mfmiddle
+    - rfmiddle
+    - lfmiddle
+    - thmiddle
+    joints: []
+    side: right
+    roles:
+    - middle_finger
+    source: heuristic
+    confidence: 0.6
+  other:
+    type: other
+    links:
+    - world
+    - forearm
+    - ee_link
+    - imu
+    - ffknuckle
+    - ffproximal
+    - ffdistal
+    - fftip
+    - mfknuckle
+    - mfproximal
+    - mfdistal
+    - mftip
+    - rfknuckle
+    - rfproximal
+    - rfdistal
+    - rftip
+    - lfmetacarpal
+    - lfknuckle
+    - lfproximal
+    - lfdistal
+    - lftip
+    - thproximal
+    - thhub
+    - thdistal
+    - thtip
+    joints: []
+    source: heuristic
+    confidence: 0.5
+notes:
+- Semantic groups were inferred from URDF link names.

@@ -1,0 +1,30 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "calibration_defaults.yaml": "7ba06125b16e6d79e9af93187f4b7ef6df23db251287753f1c94f8d1996ef33b",
+    "capabilities.yaml": "f6e6601576d9f378a8fb8b63d5f4b6341d6c74882aba9b89e3125cd864edc54d",
+    "licenses/NOTICE": "ef5813448f86d1724717d32e3100db44213c4b569f0b89765af287204b60557a",
+    "licenses/THIRD_PARTY.yaml": "5c3f4d704c7cc3de29c79b195d3ce124893b67cae798b1614b868afb71681e41",
+    "manifest.yaml": "5535086e583f61823522f688a77336fa41e9203d0f71af0562b9ca6f05cdd473",
+    "meshes/raw/collision/white_tip.obj": "bbc1d4b64f4f4115fb0fd776a14abd9496e339804bf42cb645d30aee13e61f88",
+    "meshes/raw/collision/white_tip_thumb.obj": "80e7c3de59c0b1b141e2c91ffa36374bef11636e362173d7a68a79022829020f",
+    "meshes/raw/visual/dip.obj": "472e054348c5a0e987829e721d5ba8486ddd47d867e416bb45d8d2a2ff917acf",
+    "meshes/raw/visual/fingertip.obj": "6bfa2afb2a06557ce0c54b03baec13522bfe561aabb576bd4701d4704f93ec0f",
+    "meshes/raw/visual/mcp_joint.obj": "3d7194a6a33626ffcdfce78a0ca854e67b6b49f2e09a3bd62656f94515fdfbec",
+    "meshes/raw/visual/palm_lower_left.obj": "5369c7bb802fb7effb58ff24d64da77b8630330c800cf490d96b631e93fed1e9",
+    "meshes/raw/visual/pip.obj": "3fff19dc1f0100bb5f34eaf8a40fcf3db40f96fd7179bb7336e538b21ff8e067",
+    "meshes/raw/visual/pip_left.obj": "8a9206845849784efef43486e2dafaad142f32a53c0d0fdde0381d178ec6acb4",
+    "meshes/raw/visual/thumb_dip.obj": "5b402876601f2b0b36631e6a54ad20588f88e74f52320b6c902a8bc694578689",
+    "meshes/raw/visual/thumb_fingertip.obj": "4695d72a70285e8a0132ed4de49876cf99c813182e3a24b172b53631224890de",
+    "meshes/raw/visual/thumb_pip.obj": "d28876cc3b674323aa7d8a628a4240cda2757c61263b05e86a66280035a2689d",
+    "model/model.urdf": "fcd3f39ec42497378df61f07c49d26466c2f3d8d30a5161629941540d50f8845",
+    "prompts/safety.md": "2a4d4d547f3d14a3e323586b7a416bf16099a873edec64365310367b597e52c3",
+    "prompts/skill_notes.md": "8297d6d748e89bd05a949d8c390d8123a0f2b5601b73657cdbd004df19636cfc",
+    "prompts/system.md": "ce694734ca685aa49471a773292639f8373c36d916ddc1f87f895451e1e4c8e9",
+    "prompts/tools_usage.md": "0c005e516b4d1f94fda872f1f701a11b673ca2dd8e2a903b3746d1cab1018717",
+    "providers.yaml": "b73ca55f99e82dacf73e2212679667d43e6f719f59a00c56f151f9de1f4110f7",
+    "safety.yaml": "ec00d18cdab198da60dafb51838d5b363bc7a2054eda826fb974c0d3604c889f",
+    "sandbox.yaml": "0260210632a6c5094f0896666f08deae544326f83b18cd17b602bde0f0a2f9d2",
+    "semantic.yaml": "43ff80c3d1189259c4a4cc93622d4e637e1c9fa97b6ae118726aad34068ef16e"
+  }
+}

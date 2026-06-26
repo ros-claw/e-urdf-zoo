@@ -1,0 +1,96 @@
+schema_version: e_urdf.semantic.v1
+identity:
+  source_urdf: ability_hand_right.urdf
+  inferred: 'true'
+frames:
+  root: base_link
+groups:
+  palm:
+    type: palm
+    links:
+    - base_link
+    - base
+    - thumb_base
+    joints: []
+    side: right
+    source: heuristic
+    confidence: 0.7
+  thumb:
+    type: finger
+    links:
+    - thumb_base
+    - thumb_L1
+    - thumb_L2
+    - thumb_tip
+    joints:
+    - wrist2thumb
+    - thumb_q1
+    - thumb_q2
+    - thumb_tip_joint
+    side: right
+    roles:
+    - opposable
+    source: heuristic
+    confidence: 0.6
+  index:
+    type: finger
+    links:
+    - index_L1
+    - index_L2
+    - index_tip
+    joints:
+    - index_q1
+    - index_q2
+    - index_tip_joint
+    side: right
+    roles:
+    - index_finger
+    source: heuristic
+    confidence: 0.6
+  middle:
+    type: finger
+    links:
+    - middle_L1
+    - middle_L2
+    - middle_tip
+    joints:
+    - middle_q1
+    - middle_q2
+    - middle_tip_joint
+    side: right
+    roles:
+    - middle_finger
+    source: heuristic
+    confidence: 0.6
+  ring:
+    type: finger
+    links:
+    - ring_L1
+    - ring_L2
+    - ring_tip
+    joints:
+    - ring_q1
+    - ring_q2
+    - ring_tip_joint
+    side: right
+    roles:
+    - ring_finger
+    source: heuristic
+    confidence: 0.6
+  pinky:
+    type: finger
+    links:
+    - pinky_L1
+    - pinky_L2
+    - pinky_tip
+    joints:
+    - pinky_q1
+    - pinky_q2
+    - pinky_tip_joint
+    side: right
+    roles:
+    - pinky_finger
+    source: heuristic
+    confidence: 0.6
+notes:
+- Semantic groups were inferred from URDF link names.

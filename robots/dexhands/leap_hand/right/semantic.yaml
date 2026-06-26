@@ -1,0 +1,85 @@
+schema_version: e_urdf.semantic.v1
+identity:
+  source_urdf: leap_hand_right.urdf
+  inferred: 'true'
+frames:
+  root: base
+groups:
+  palm:
+    type: palm
+    links:
+    - base
+    - palm_lower
+    - thumb_temp_base
+    joints: []
+    side: right
+    source: heuristic
+    confidence: 0.7
+  thumb:
+    type: finger
+    links:
+    - thumb_temp_base
+    - thumb_pip
+    - thumb_dip
+    - thumb_fingertip
+    - thumb_tip_head
+    joints:
+    - thumb_tip
+    side: right
+    roles:
+    - opposable
+    source: heuristic
+    confidence: 0.6
+  index:
+    type: finger
+    links:
+    - index_tip_head
+    joints:
+    - index_tip
+    side: right
+    roles:
+    - index_finger
+    source: heuristic
+    confidence: 0.6
+  middle:
+    type: finger
+    links:
+    - middle_tip_head
+    joints:
+    - middle_tip
+    side: right
+    roles:
+    - middle_finger
+    source: heuristic
+    confidence: 0.6
+  ring:
+    type: finger
+    links:
+    - ring_tip_head
+    joints:
+    - ring_tip
+    side: right
+    roles:
+    - ring_finger
+    source: heuristic
+    confidence: 0.6
+  other:
+    type: other
+    links:
+    - mcp_joint
+    - pip
+    - dip
+    - fingertip
+    - mcp_joint_2
+    - pip_2
+    - dip_2
+    - fingertip_2
+    - mcp_joint_3
+    - pip_3
+    - dip_3
+    - fingertip_3
+    joints: []
+    source: heuristic
+    confidence: 0.5
+notes:
+- Semantic groups were inferred from URDF link names.

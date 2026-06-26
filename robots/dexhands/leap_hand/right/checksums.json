@@ -1,0 +1,29 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "calibration_defaults.yaml": "7ba06125b16e6d79e9af93187f4b7ef6df23db251287753f1c94f8d1996ef33b",
+    "capabilities.yaml": "f6e6601576d9f378a8fb8b63d5f4b6341d6c74882aba9b89e3125cd864edc54d",
+    "licenses/NOTICE": "ef5813448f86d1724717d32e3100db44213c4b569f0b89765af287204b60557a",
+    "licenses/THIRD_PARTY.yaml": "5c3f4d704c7cc3de29c79b195d3ce124893b67cae798b1614b868afb71681e41",
+    "manifest.yaml": "62feeb0ba92b6e4a457c3d055a9d604a066dc9885c76b06b9b4e456fc788ffad",
+    "meshes/raw/collision/white_tip.obj": "bbc1d4b64f4f4115fb0fd776a14abd9496e339804bf42cb645d30aee13e61f88",
+    "meshes/raw/collision/white_tip_thumb.obj": "80e7c3de59c0b1b141e2c91ffa36374bef11636e362173d7a68a79022829020f",
+    "meshes/raw/visual/dip.obj": "472e054348c5a0e987829e721d5ba8486ddd47d867e416bb45d8d2a2ff917acf",
+    "meshes/raw/visual/fingertip.obj": "6bfa2afb2a06557ce0c54b03baec13522bfe561aabb576bd4701d4704f93ec0f",
+    "meshes/raw/visual/mcp_joint.obj": "3d7194a6a33626ffcdfce78a0ca854e67b6b49f2e09a3bd62656f94515fdfbec",
+    "meshes/raw/visual/palm_lower.obj": "90d1d9b2a1c9eea15fbeb2232019c6191a55a3c4afa7f7427ce7afa0e3108b07",
+    "meshes/raw/visual/pip.obj": "3fff19dc1f0100bb5f34eaf8a40fcf3db40f96fd7179bb7336e538b21ff8e067",
+    "meshes/raw/visual/thumb_dip.obj": "5b402876601f2b0b36631e6a54ad20588f88e74f52320b6c902a8bc694578689",
+    "meshes/raw/visual/thumb_fingertip.obj": "4695d72a70285e8a0132ed4de49876cf99c813182e3a24b172b53631224890de",
+    "meshes/raw/visual/thumb_pip.obj": "d28876cc3b674323aa7d8a628a4240cda2757c61263b05e86a66280035a2689d",
+    "model/model.urdf": "dec7b41dee836785087f4c37942a4773e2b7ccaaa60975c3ce62cc7766c5231d",
+    "prompts/safety.md": "1a7e49d276b5e4e332b596e758f9b8eaad690298e7275cefc8c7cda1f80de804",
+    "prompts/skill_notes.md": "93a6b7f43d978896be331365c5c4c761e22aac83610772b06a9eb4ea1add74ee",
+    "prompts/system.md": "b48353a89ff7f27572e9f38a0c5d9cb0e1c0a862d563619dbdbc9eb74c5afabb",
+    "prompts/tools_usage.md": "aec58b319b77dc421daf73fbfd6b1549b5da3669098f3ee9fe8d6657de6d7d13",
+    "providers.yaml": "b73ca55f99e82dacf73e2212679667d43e6f719f59a00c56f151f9de1f4110f7",
+    "safety.yaml": "ec00d18cdab198da60dafb51838d5b363bc7a2054eda826fb974c0d3604c889f",
+    "sandbox.yaml": "0260210632a6c5094f0896666f08deae544326f83b18cd17b602bde0f0a2f9d2",
+    "semantic.yaml": "4579af13ff87eb9f2c626d6509b9df006c4d9838182bfead9e4b511e46bbfbba"
+  }
+}

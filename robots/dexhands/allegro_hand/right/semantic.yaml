@@ -1,0 +1,45 @@
+schema_version: e_urdf.semantic.v1
+identity:
+  source_urdf: allegro_hand_right.urdf
+  inferred: 'true'
+frames:
+  root: base_link
+groups:
+  palm:
+    type: palm
+    links:
+    - base_link
+    - palm
+    - wrist
+    joints: []
+    side: right
+    source: heuristic
+    confidence: 0.7
+  other:
+    type: other
+    links:
+    - link_0.0
+    - link_1.0
+    - link_2.0
+    - link_3.0
+    - link_3.0_tip
+    - link_4.0
+    - link_5.0
+    - link_6.0
+    - link_7.0
+    - link_7.0_tip
+    - link_8.0
+    - link_9.0
+    - link_10.0
+    - link_11.0
+    - link_11.0_tip
+    - link_12.0
+    - link_13.0
+    - link_14.0
+    - link_15.0
+    - link_15.0_tip
+    joints: []
+    source: heuristic
+    confidence: 0.5
+notes:
+- Semantic groups were inferred from URDF link names.

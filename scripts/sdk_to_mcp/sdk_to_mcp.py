@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""
-sdk_to_mcp: Automated e-URDF Asset Generator
+"""sdk_to_mcp: Automated e-URDF Asset Generator
 
 Converts traditional robot SDKs and URDF files into e-URDF Embodiment Asset Bundles.
 Uses LLM-based extraction to generate semantic descriptions, safety parameters, and prompts.
@@ -14,7 +13,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -98,7 +96,6 @@ def infer_robot_type(urdf_info: dict[str, Any]) -> str:
 
 def generate_e_urdf(urdf_info: dict[str, Any], robot_type: str) -> dict[str, Any]:
     """Generate e_urdf.json structure from URDF info."""
-
     # Infer capabilities based on type
     affordances = {
         "humanoid": [
@@ -207,7 +204,6 @@ def generate_e_urdf(urdf_info: dict[str, Any], robot_type: str) -> dict[str, Any
 
 def generate_system_prompt(robot_name: str, robot_type: str, dof: int) -> str:
     """Generate system prompt for the robot."""
-
     prompts = {
         "humanoid": f"""# System Prompt: {robot_name} Humanoid Robot
 
@@ -302,7 +298,6 @@ Always validate actions before execution using the safety tools.
 
 def generate_tools_usage_prompt(robot_type: str) -> str:
     """Generate tools usage prompt."""
-
     base_content = """# MCP Tool Usage Guide
 
 ## Tool: `verify_action_safety`
@@ -368,7 +363,6 @@ def create_asset_bundle(
     sdk_docs_path: Path | None = None,
 ) -> None:
     """Create complete e-URDF asset bundle."""
-
     print(f"📁 Creating asset bundle in: {output_dir}")
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -434,11 +428,11 @@ def create_asset_bundle(
         print("   ⚠️  SDK doc extraction requires LLM integration")
         print("   Manual review of generated prompts recommended")
 
-    print(f"\n✅ Asset bundle created successfully!")
-    print(f"\nNext steps:")
+    print("\n✅ Asset bundle created successfully!")
+    print("\nNext steps:")
     print(f"  1. Review {e_urdf_path}")
     print(f"  2. Convert URDF to MJCF: python -c \"import mujoco; mujoco.compile('{urdf_path}', '{output_dir}/model.xml')\"")
-    print(f"  3. Test with mjlab-mcp-server")
+    print("  3. Test with mjlab-mcp-server")
 
 
 def main():
@@ -497,7 +491,7 @@ def main():
         print(f"DOF: {urdf_info['dof']}")
         print(f"Joints: {len(urdf_info['joints'])}")
         print(f"Links: {len(urdf_info['links'])}")
-        print(f"\nMovable Joints:")
+        print("\nMovable Joints:")
         for name, limits in urdf_info["joint_limits"].items():
             print(f"  - {name}: [{limits['lower']:.2f}, {limits['upper']:.2f}] rad")
 

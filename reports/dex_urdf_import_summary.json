@@ -1,0 +1,250 @@
+{
+  "total": 16,
+  "assets": [
+    {
+      "asset_id": "dexhands/ability_hand/left",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/ability_hand/left",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/ability_hand/left/manifest.yaml"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "asset_id": "dexhands/ability_hand/right",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/ability_hand/right",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/ability_hand/right/manifest.yaml"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "asset_id": "dexhands/allegro_hand/left",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/allegro_hand/left",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/allegro_hand/left/manifest.yaml"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "asset_id": "dexhands/allegro_hand/right",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/allegro_hand/right",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/allegro_hand/right/manifest.yaml"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "asset_id": "dexhands/barrett_hand/unspecified",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/barrett_hand/unspecified",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/barrett_hand/unspecified/manifest.yaml"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "asset_id": "dexhands/dclaw/default",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/dclaw/default",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/dclaw/default/manifest.yaml"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "asset_id": "dexhands/inspire_hand/left",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/inspire_hand/left",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/inspire_hand/left/manifest.yaml"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "asset_id": "dexhands/inspire_hand/right",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/inspire_hand/right",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/inspire_hand/right/manifest.yaml"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "asset_id": "dexhands/leap_hand/left",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/leap_hand/left",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/leap_hand/left/manifest.yaml"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "asset_id": "dexhands/leap_hand/right",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/leap_hand/right",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/leap_hand/right/manifest.yaml"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "asset_id": "dexhands/schunk_svh/left",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/schunk_svh/left",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/schunk_svh/left/manifest.yaml"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "asset_id": "dexhands/schunk_svh/right",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/schunk_svh/right",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/schunk_svh/right/manifest.yaml"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "asset_id": "dexhands/shadow_hand/left",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/shadow_hand/left",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/shadow_hand/left/manifest.yaml"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "asset_id": "dexhands/shadow_hand/right",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/shadow_hand/right",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/shadow_hand/right/manifest.yaml"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "asset_id": "dexhands/shadow_hand/unspecified",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/shadow_hand/unspecified",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/shadow_hand/unspecified/manifest.yaml"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "asset_id": "grippers/panda/default",
+      "status": "experimental",
+      "validation": "PASS_WITH_WARNINGS",
+      "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/grippers/panda/default",
+      "warnings": [
+        {
+          "file": "manifest.yaml",
+          "level": "warning",
+          "message": "upstream_model_license is unknown; commercial review recommended",
+          "path": "/home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/grippers/panda/default/manifest.yaml"
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "validation_summary": {
+    "PASS": 0,
+    "PASS_WITH_WARNINGS": 16,
+    "FAIL": 0
+  }
+}

@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""
-Bulk Import Script: Generate skeleton e-URDF bundles from MuJoCo Menagerie.
+"""Bulk Import Script: Generate skeleton e-URDF bundles from MuJoCo Menagerie.
 
 This script creates basic e_urdf.json configurations for all robots in menagerie,
 which can be refined later with full semantic descriptions and prompts.
@@ -70,7 +69,6 @@ def count_dofs(xml_path: Path) -> int:
 
 def generate_skeleton_e_urdf(robot_id: str, robot_type: str, dof: int, xml_file: str) -> dict:
     """Generate a skeleton e_urdf.json configuration."""
-
     # Base affordances by type
     affordances_by_type = {
         "humanoid": ["walking", "standing", "balancing", "reaching", "grasping", "gesticulation"],
@@ -174,7 +172,6 @@ def generate_skeleton_e_urdf(robot_id: str, robot_type: str, dof: int, xml_file:
 
 def create_skeleton_bundle(robot_id: str, menagerie_path: Path, output_base: Path) -> bool:
     """Create a skeleton e-URDF bundle for a robot."""
-
     robot_dir = menagerie_path / robot_id
     if not robot_dir.is_dir():
         return False

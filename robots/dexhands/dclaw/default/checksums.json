@@ -1,0 +1,25 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "calibration_defaults.yaml": "7ba06125b16e6d79e9af93187f4b7ef6df23db251287753f1c94f8d1996ef33b",
+    "capabilities.yaml": "f6e6601576d9f378a8fb8b63d5f4b6341d6c74882aba9b89e3125cd864edc54d",
+    "licenses/NOTICE": "ef5813448f86d1724717d32e3100db44213c4b569f0b89765af287204b60557a",
+    "licenses/THIRD_PARTY.yaml": "5c3f4d704c7cc3de29c79b195d3ce124893b67cae798b1614b868afb71681e41",
+    "manifest.yaml": "c2a9d4cbb149bbd0111e357dc1d1a09289575c2e471af891de8e88776883ac47",
+    "meshes/raw/collision/base_link_cylinder.obj": "038fce444975c9d763a26ba594cc1f2ffc75f5d20c2602ef2c2e80c282ac2b0f",
+    "meshes/raw/collision/finger_tip.obj": "186a67df7b7f27734ca0f936b0c646d14d8c17058a9456d66845b0511fb5f303",
+    "meshes/raw/visual/base_link.obj": "adc9593bccc40dc3e98ad3c3e88343c12b350c62e32df12b160c663c223578a6",
+    "meshes/raw/visual/link_1.obj": "376d9d100ed6235e4e4bf32242964ca0ad2dac0a89c18032a37ecf2c076ae7e7",
+    "meshes/raw/visual/link_2.obj": "667d6484f6fba50fc2d4d3d67476035944aa60f855e5bf85d83ff4c08393f7cf",
+    "meshes/raw/visual/link_3.obj": "47bc7ecb8570e87552102565349ad9ab3391f64b17ef15a449df185167a5bb9b",
+    "model/model.urdf": "fa186be6d07ea95fd67185ec2fd8290a2940ce041e1405f63d69d5b9d9e60589",
+    "prompts/safety.md": "689745172acdfcd4d4827573a3f1e571bc1e9377e9741fa86d14d8f57ee562bf",
+    "prompts/skill_notes.md": "da7c614f22cd2fa728e6d240dc3a49bee403440ff1358e83037e4bb494799f5c",
+    "prompts/system.md": "7f9e65ba65763a766f51d394b97b85bd906c2a18161f314fa3b7eb6fb7297546",
+    "prompts/tools_usage.md": "14cc665842b564ed441c4f3af272757272f78b9e3089ceafa82e830ca1a2a812",
+    "providers.yaml": "b73ca55f99e82dacf73e2212679667d43e6f719f59a00c56f151f9de1f4110f7",
+    "safety.yaml": "ec00d18cdab198da60dafb51838d5b363bc7a2054eda826fb974c0d3604c889f",
+    "sandbox.yaml": "0260210632a6c5094f0896666f08deae544326f83b18cd17b602bde0f0a2f9d2",
+    "semantic.yaml": "83220e312f131e2fdd5973358204e5b09d7ba9b6d43fbae76cfea1dfbebe4767"
+  }
+}

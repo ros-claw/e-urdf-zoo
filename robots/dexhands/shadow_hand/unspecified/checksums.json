@@ -1,0 +1,19 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "calibration_defaults.yaml": "7ba06125b16e6d79e9af93187f4b7ef6df23db251287753f1c94f8d1996ef33b",
+    "capabilities.yaml": "f6e6601576d9f378a8fb8b63d5f4b6341d6c74882aba9b89e3125cd864edc54d",
+    "licenses/NOTICE": "ef5813448f86d1724717d32e3100db44213c4b569f0b89765af287204b60557a",
+    "licenses/THIRD_PARTY.yaml": "5c3f4d704c7cc3de29c79b195d3ce124893b67cae798b1614b868afb71681e41",
+    "manifest.yaml": "06ce7ce577e5897825e46232c04cab394e7fc73e9f60a89f47312e22a4cdf232",
+    "model/model.urdf": "ef5c733fba938338aa450473c517de09e40e729f8e26e35d472f56067c468ac1",
+    "prompts/safety.md": "100d4703955cf90c0c80e4bbc041cf61ec5edb7c154655e0b3c2eac49c4655d5",
+    "prompts/skill_notes.md": "980d73c900ba07aa4b5d845b8463e1dc6d1f290e7a455c455e21ead6637d8fa7",
+    "prompts/system.md": "1a2e21bd11587d9a83f57da2f636367c6bd955d1687c75ba4a643a21218dc90d",
+    "prompts/tools_usage.md": "0bd0fa75c96c598a7bf79185d9b856e28a5e5325ac42e6d6382935ace0105848",
+    "providers.yaml": "b73ca55f99e82dacf73e2212679667d43e6f719f59a00c56f151f9de1f4110f7",
+    "safety.yaml": "ec00d18cdab198da60dafb51838d5b363bc7a2054eda826fb974c0d3604c889f",
+    "sandbox.yaml": "0260210632a6c5094f0896666f08deae544326f83b18cd17b602bde0f0a2f9d2",
+    "semantic.yaml": "6eeed098d5e70d29274b4f5acf1295d3f10d22bca1d04608ba1bc532df8d7da5"
+  }
+}

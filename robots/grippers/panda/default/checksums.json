@@ -1,0 +1,21 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "calibration_defaults.yaml": "7ba06125b16e6d79e9af93187f4b7ef6df23db251287753f1c94f8d1996ef33b",
+    "capabilities.yaml": "f6e6601576d9f378a8fb8b63d5f4b6341d6c74882aba9b89e3125cd864edc54d",
+    "licenses/NOTICE": "ef5813448f86d1724717d32e3100db44213c4b569f0b89765af287204b60557a",
+    "licenses/THIRD_PARTY.yaml": "5c3f4d704c7cc3de29c79b195d3ce124893b67cae798b1614b868afb71681e41",
+    "manifest.yaml": "314430a4984956351c05ae1122e3225a1a583da539d2d264bdd2058687cf732e",
+    "meshes/raw/visual/finger.glb": "3362790a5d76ab35d74e414e2c54ec6491e02c05aa16ff2b37b67c897824ae77",
+    "meshes/raw/visual/hand.glb": "8d6407d57d6e1303aef33cdaf3c4c7bf2a407c25af73f60ad6f2c7b041e171f9",
+    "model/model.urdf": "f86a34f1252fce0a47e385e4eaab5b05fd30e98c235345b42111be3c7a830e83",
+    "prompts/safety.md": "7d068ec239aac66f72c5eb8310e17d2225c951bd91c34a3f9ad6a7ba70067a27",
+    "prompts/skill_notes.md": "50ae424b909fd30cf568800997f0835ace987ddcc7a573073ec4a5a885a1f027",
+    "prompts/system.md": "00927e6882aac0129ecafdc8523fe732927253b0e0b03cb87b5503ccf5cd55ad",
+    "prompts/tools_usage.md": "238978f12ec32221ce8053aaeb8d7f3190cbb81f9413d3de60bc10b1778e3326",
+    "providers.yaml": "b73ca55f99e82dacf73e2212679667d43e6f719f59a00c56f151f9de1f4110f7",
+    "safety.yaml": "ec00d18cdab198da60dafb51838d5b363bc7a2054eda826fb974c0d3604c889f",
+    "sandbox.yaml": "0260210632a6c5094f0896666f08deae544326f83b18cd17b602bde0f0a2f9d2",
+    "semantic.yaml": "c4b709ae2c799fd145681a79837f11b5b3e3339b7956e41dc957fe8c1812ea4d"
+  }
+}

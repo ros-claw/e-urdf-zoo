@@ -1,0 +1,44 @@
+schema_version: e_urdf.asset.v1
+asset:
+  id: dexhands/shadow_hand/right
+  name: Shadow Hand (Right)
+  version: 0.1.0
+  status: experimental
+  category: dexhands
+  vendor: Shadow Robot Company
+  model: shadow_hand
+  variant: right
+  description: Imported shadow_hand from dexsuite/dex-urdf
+source:
+  type: third_party_import
+  upstream_repo: https://github.com/dexsuite/dex-urdf
+  upstream_url: https://github.com/dexsuite/dex-urdf
+  upstream_commit: f5e7132f22108164577fea4c25ef99b5cc0e1900
+  upstream_path: /home/ubuntu/rosclaw/rosclaw/dex-urdf
+  imported_at: ''
+  importer: e_urdf_zoo.importers.dex_urdf
+license:
+  repo_declared_license: MIT
+  upstream_model_license: unknown
+  source_url: https://github.com/dexsuite/dex-urdf
+  source_commit: f5e7132f22108164577fea4c25ef99b5cc0e1900
+  import_blocking: false
+  display_warning: true
+  commercial_review_recommended: true
+  notes:
+  - License metadata should be reviewed against upstream before commercial use.
+model:
+  primary_format: urdf
+  urdf: model/model.urdf
+  meshes_dir: meshes/
+robot:
+  morphology: end_effector
+  robot_class: hand
+  side: right
+runtime_policy:
+  real_robot_execution_allowed: false
+  sandbox_required: true
+  provider_required: true
+  calibration_required: true
+  low_speed_first_run_required: true
+  fault_monitor_required: true

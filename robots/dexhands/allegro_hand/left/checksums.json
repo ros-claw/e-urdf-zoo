@@ -1,0 +1,30 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "calibration_defaults.yaml": "7ba06125b16e6d79e9af93187f4b7ef6df23db251287753f1c94f8d1996ef33b",
+    "capabilities.yaml": "f6e6601576d9f378a8fb8b63d5f4b6341d6c74882aba9b89e3125cd864edc54d",
+    "licenses/NOTICE": "ef5813448f86d1724717d32e3100db44213c4b569f0b89765af287204b60557a",
+    "licenses/THIRD_PARTY.yaml": "5c3f4d704c7cc3de29c79b195d3ce124893b67cae798b1614b868afb71681e41",
+    "manifest.yaml": "63a715d02db390d3c42be0e53a0cd6e7d891a7bd3433ffef61258a29145cdada",
+    "meshes/raw/collision/link_tip.obj": "cd517fb6f1b4ccec9ef48501b2a41494d700fdf376f37aa6909afcee172e64f4",
+    "meshes/raw/visual/base_link_left.obj": "fbc01616cbd28d9c133a4ed6942ddf07e55ec84fa99a900c6b9bf6499d87ceca",
+    "meshes/raw/visual/link_0.0.obj": "f8ba6316f4fe17e740276b7f28864f53c0296a1d8b0072e98561be1c6f063732",
+    "meshes/raw/visual/link_1.0.obj": "3f379c94cb867d8421db1879d50f4b11d9ddfde0e4c46e25e0a7da41466368ae",
+    "meshes/raw/visual/link_12.0_left.obj": "59ba34b4fe47f46381bf02ce835bae978411095c632fee6006823135daa9915a",
+    "meshes/raw/visual/link_13.0.obj": "774f0a09ae38e0ce3192cf53063cc39d9c8400096435a4491bac52f25c7012ff",
+    "meshes/raw/visual/link_14.0.obj": "0b5d6e3e2294abb0c046bd2397021877e012fd14ebf899713470f8bdfca32d38",
+    "meshes/raw/visual/link_15.0.obj": "f682074d43e0f3dc08a44eb6a821bf93fff9015b168cb1e75913aaaea4873782",
+    "meshes/raw/visual/link_2.0.obj": "81886acc0097e0872c3ff7004025481a984fd73d9ebe70213693d6d66a713e07",
+    "meshes/raw/visual/link_3.0.obj": "6495c4ed4e0950539c0e6145c3593b065ed0befe5e2802d2fade0d66c840dd72",
+    "meshes/raw/visual/link_tip.obj": "4c1cdca17b218ad9cf912ff2ecc9509bfff35fdc8ca4c58468e8c5e9689d30b7",
+    "model/model.urdf": "b8d05e862f6440338687bc72123d910decd99aa137b93ae02776cd21efef0033",
+    "prompts/safety.md": "2d2f85f7d4195d8eee2385f8e075ef2ebceba8d4b32e8865358739311e5c42e2",
+    "prompts/skill_notes.md": "114d3f07c62c93903968e016700266325ed768809024986617fac2a2b2067d9d",
+    "prompts/system.md": "c27aa746d7eee1c62cbb98d4e05cfdb7b38ff296e465eef1ad1877aa0c519a86",
+    "prompts/tools_usage.md": "a43dbc0f6896b52f6a268103964a245dbdf92e96a0651ea707239a6e75177c1c",
+    "providers.yaml": "b73ca55f99e82dacf73e2212679667d43e6f719f59a00c56f151f9de1f4110f7",
+    "safety.yaml": "ec00d18cdab198da60dafb51838d5b363bc7a2054eda826fb974c0d3604c889f",
+    "sandbox.yaml": "0260210632a6c5094f0896666f08deae544326f83b18cd17b602bde0f0a2f9d2",
+    "semantic.yaml": "0f331d910a75638c08cdb38412f90c7aebaad8cd28282dc07489e346a2f451b4"
+  }
+}

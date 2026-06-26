@@ -1,0 +1,31 @@
+schema_version: e_urdf.capabilities.v1
+capabilities:
+- id: open_gripper
+  name: Open Gripper
+  scope: manipulation
+  risk: low
+  sandbox_required: true
+  real_robot_execution_allowed: false
+- id: close_gripper_slow
+  name: Close Gripper Slowly
+  scope: manipulation
+  risk: medium
+  sandbox_required: true
+  real_robot_execution_allowed: false
+forbidden_capabilities:
+- id: forceful_grasp_without_current_limit
+  description: Forceful grasping without active current/torque limit
+  reason: Can damage the hand and grasped object
+  severity: critical
+  enforcement:
+    policy_block: true
+    sandbox_block: true
+    real_robot_block: true
+- id: fast_full_close
+  description: Close all fingers/joints to maximum at high speed
+  reason: Risk of collision and motor overload
+  severity: critical
+  enforcement:
+    policy_block: true
+    sandbox_block: true
+    real_robot_block: true

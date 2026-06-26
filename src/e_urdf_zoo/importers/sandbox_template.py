@@ -1,0 +1,41 @@
+"""Default sandbox.yaml content for imported dex-urdf assets."""
+
+from __future__ import annotations
+
+from typing import Any
+
+
+def default_sandbox(asset_name: str) -> dict[str, Any]:
+    return {
+        "schema_version": "e_urdf.sandbox.v1",
+        "supported_engines": ["mujoco"],
+        "default_engine": "mujoco",
+        "engine_configs": {
+            "mujoco": {
+                "timestep": 0.002,
+                "integrator": "implicitfast",
+                "solver": "newton",
+                "iterations": 50,
+                "ls_iterations": 10,
+            }
+        },
+        "required_checks": [
+            "parse_urdf",
+            "mesh_load",
+            "collision_check",
+            "velocity_limit_check",
+            "emergency_stop_response",
+        ],
+        "test_poses": [
+            {
+                "name": "open_hand",
+                "description": "All joints at open/zeros pose",
+                "joint_targets": {},
+            },
+            {
+                "name": "half_close",
+                "description": "Fingers half closed",
+                "joint_targets": {},
+            },
+        ],
+    }

@@ -1,0 +1,31 @@
+schema_version: e_urdf.semantic.v1
+identity:
+  source_urdf: bhand_model.urdf
+  inferred: 'true'
+frames:
+  root: base_link
+groups:
+  palm:
+    type: palm
+    links:
+    - base_link
+    joints: []
+    side: null
+    source: heuristic
+    confidence: 0.7
+  other:
+    type: other
+    links:
+    - finger_1_prox_link
+    - finger_1_med_liink
+    - finger_1_dist_link
+    - finger_2_prox_link
+    - finger_2_med_link
+    - finger_2_dist_link
+    - finger_3_med_link
+    - finger_3_dist_link
+    joints: []
+    source: heuristic
+    confidence: 0.5
+notes:
+- Semantic groups were inferred from URDF link names.

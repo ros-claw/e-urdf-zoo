@@ -1,0 +1,11 @@
+upstream:
+  type: third_party_import
+  upstream_repo: https://github.com/dexsuite/dex-urdf
+  upstream_url: https://github.com/dexsuite/dex-urdf
+  upstream_commit: f5e7132f22108164577fea4c25ef99b5cc0e1900
+  upstream_path: /home/ubuntu/rosclaw/rosclaw/dex-urdf
+  imported_at: ''
+  importer: e_urdf_zoo.importers.dex_urdf
+license: unknown
+notes:
+- Review upstream license before commercial use.

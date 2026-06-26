@@ -1,0 +1,637 @@
+schema_version: e_urdf.index.v1
+zoo_path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots
+count: 79
+entries:
+- id: agilex_piper
+  name: Agilex Piper
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/agilex_piper
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: agility_cassie
+  name: Agility Cassie
+  category: quadruped
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/agility_cassie
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: aloha
+  name: Aloha
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/aloha
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: anybotics_anymal_b
+  name: Anybotics Anymal B
+  category: quadruped
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/anybotics_anymal_b
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: anybotics_anymal_c
+  name: Anybotics Anymal C
+  category: quadruped
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/anybotics_anymal_c
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: apptronik_apollo
+  name: Apptronik Apollo
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/apptronik_apollo
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: arx_l5
+  name: Arx L5
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/arx_l5
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: berkeley_humanoid
+  name: Berkeley Humanoid
+  category: humanoid
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/berkeley_humanoid
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: bitcraze_crazyflie_2
+  name: Bitcraze Crazyflie 2
+  category: aerial
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/bitcraze_crazyflie_2
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: booster_t1
+  name: Booster T1
+  category: generic
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/booster_t1
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: boston_dynamics_spot
+  name: Boston Dynamics Spot
+  category: quadruped
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/boston_dynamics_spot
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: dexhands/ability_hand/left
+  name: Ability Hand (Left)
+  category: dexhands
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/ability_hand/left
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: dexhands/ability_hand/right
+  name: Ability Hand (Right)
+  category: dexhands
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/ability_hand/right
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: dexhands/allegro_hand/left
+  name: Allegro Hand (Left)
+  category: dexhands
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/allegro_hand/left
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: dexhands/allegro_hand/right
+  name: Allegro Hand (Right)
+  category: dexhands
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/allegro_hand/right
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: dexhands/barrett_hand/unspecified
+  name: Barrett Hand (Unspecified)
+  category: dexhands
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/barrett_hand/unspecified
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: dexhands/dclaw/default
+  name: Dclaw Gripper
+  category: dexhands
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/dclaw/default
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: dexhands/inspire_hand/left
+  name: Inspire Hand (Left)
+  category: dexhands
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/inspire_hand/left
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: dexhands/inspire_hand/right
+  name: Inspire Hand (Right)
+  category: dexhands
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/inspire_hand/right
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: dexhands/leap_hand/left
+  name: Leap Hand (Left)
+  category: dexhands
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/leap_hand/left
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: dexhands/leap_hand/right
+  name: Leap Hand (Right)
+  category: dexhands
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/leap_hand/right
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: dexhands/schunk_svh/left
+  name: Schunk Hand (Left)
+  category: dexhands
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/schunk_svh/left
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: dexhands/schunk_svh/right
+  name: Schunk Hand (Right)
+  category: dexhands
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/schunk_svh/right
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: dexhands/shadow_hand/left
+  name: Shadow Hand (Left)
+  category: dexhands
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/shadow_hand/left
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: dexhands/shadow_hand/right
+  name: Shadow Hand (Right)
+  category: dexhands
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/shadow_hand/right
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: dexhands/shadow_hand/unspecified
+  name: Shadow Hand (Unspecified)
+  category: dexhands
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dexhands/shadow_hand/unspecified
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: dynamixel_2r
+  name: Dynamixel 2R
+  category: generic
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/dynamixel_2r
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: flexiv_rizon4
+  name: Flexiv Rizon4
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/flexiv_rizon4
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: flybody
+  name: Flybody
+  category: generic
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/flybody
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: fourier_n1
+  name: Fourier N1
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/fourier_n1
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: franka_emika_panda
+  name: Franka Emika Panda
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/franka_emika_panda
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: franka_fr3
+  name: Franka Fr3
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/franka_fr3
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: franka_fr3_v2
+  name: Franka Fr3 V2
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/franka_fr3_v2
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: google_barkour_v0
+  name: Google Barkour V0
+  category: quadruped
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/google_barkour_v0
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: google_barkour_vb
+  name: Google Barkour Vb
+  category: quadruped
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/google_barkour_vb
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: google_robot
+  name: Google Robot
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/google_robot
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: grippers/panda/default
+  name: Panda Gripper
+  category: grippers
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/grippers/panda/default
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases: []
+- id: hello_robot_stretch
+  name: Hello Robot Stretch
+  category: mobile_manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/hello_robot_stretch
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: hello_robot_stretch_3
+  name: Hello Robot Stretch 3
+  category: mobile_manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/hello_robot_stretch_3
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: i2rt_yam
+  name: I2Rt Yam
+  category: generic
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/i2rt_yam
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: iit_softfoot
+  name: Iit Softfoot
+  category: generic
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/iit_softfoot
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: kinova_gen3
+  name: Kinova Gen3
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/kinova_gen3
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: kuka_iiwa_14
+  name: Kuka Iiwa 14
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/kuka_iiwa_14
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: leap_hand
+  name: Leap Hand
+  category: gripper
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/leap_hand
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: low_cost_robot_arm
+  name: Low Cost Robot Arm
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/low_cost_robot_arm
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: ms_human_700
+  name: Ms Human 700
+  category: generic
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/ms_human_700
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: pal_talos
+  name: Pal Talos
+  category: humanoid
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/pal_talos
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: pal_tiago
+  name: Pal Tiago
+  category: mobile_manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/pal_tiago
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: pal_tiago_dual
+  name: Pal Tiago Dual
+  category: mobile_manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/pal_tiago_dual
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: pndbotics_adam_lite
+  name: Pndbotics Adam Lite
+  category: humanoid
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/pndbotics_adam_lite
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: rethink_robotics_sawyer
+  name: Rethink Robotics Sawyer
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/rethink_robotics_sawyer
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: robot_soccer_kit
+  name: Robot Soccer Kit
+  category: generic
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/robot_soccer_kit
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: robotiq_2f85
+  name: Robotiq 2F85
+  category: gripper
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/robotiq_2f85
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: robotiq_2f85_v4
+  name: Robotiq 2F85 V4
+  category: gripper
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/robotiq_2f85_v4
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: robotis_op3
+  name: Robotis Op3
+  category: humanoid
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/robotis_op3
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: robotstudio_so101
+  name: Robotstudio So101
+  category: quadruped
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/robotstudio_so101
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: shadow_dexee
+  name: Shadow Dexee
+  category: gripper
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/shadow_dexee
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: shadow_hand
+  name: Shadow Hand
+  category: gripper
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/shadow_hand
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: skydio_x2
+  name: Skydio X2
+  category: aerial
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/skydio_x2
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: stanford_tidybot
+  name: Stanford Tidybot
+  category: mobile_manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/stanford_tidybot
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: tetheria_aero_hand_open
+  name: Tetheria Aero Hand Open
+  category: gripper
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/tetheria_aero_hand_open
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: toddlerbot_2xc
+  name: Toddlerbot 2Xc
+  category: mobile_manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/toddlerbot_2xc
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: toddlerbot_2xm
+  name: Toddlerbot 2Xm
+  category: mobile_manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/toddlerbot_2xm
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: trossen_vx300s
+  name: Trossen Vx300S
+  category: generic
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/trossen_vx300s
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: trossen_wx250s
+  name: Trossen Wx250S
+  category: aerial
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/trossen_wx250s
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: trossen_wxai
+  name: Trossen Wxai
+  category: generic
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/trossen_wxai
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: trs_so_arm100
+  name: Trs So Arm100
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/trs_so_arm100
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: ufactory_lite6
+  name: Ufactory Lite6
+  category: generic
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/ufactory_lite6
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: ufactory_xarm7
+  name: Ufactory Xarm7
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/ufactory_xarm7
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: umi_gripper
+  name: Umi Gripper
+  category: generic
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/umi_gripper
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: unitree_a1
+  name: Unitree A1
+  category: quadruped
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/unitree_a1
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: unitree_g1
+  name: Unitree G1 Humanoid Robot
+  category: humanoid
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/unitree_g1
+  status: experimental
+  version: 1.0.0
+  is_legacy: true
+  aliases: []
+- id: unitree_go1
+  name: Unitree Go1
+  category: quadruped
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/unitree_go1
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: unitree_go2
+  name: Unitree Go2
+  category: quadruped
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/unitree_go2
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: unitree_h1
+  name: Unitree H1
+  category: humanoid
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/unitree_h1
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: unitree_z1
+  name: Unitree Z1
+  category: generic
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/unitree_z1
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: universal_robots_ur10e
+  name: Universal Robots Ur10E
+  category: manipulator
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/universal_robots_ur10e
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+- id: universal_robots_ur5e
+  name: UR5e Collaborative Robotic Arm
+  category: collaborative_arm
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/universal_robots_ur5e
+  status: experimental
+  version: 1.0.0
+  is_legacy: true
+  aliases: []
+- id: wonik_allegro
+  name: Wonik Allegro
+  category: generic
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/wonik_allegro
+  status: experimental
+  version: 0.1.0-skeleton
+  is_legacy: true
+  aliases: []
+aliases: {}
