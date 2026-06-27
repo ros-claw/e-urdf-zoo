@@ -1,0 +1,96 @@
+schema_version: e_urdf.capabilities.v1
+capabilities:
+- id: rgb_observation
+  name: RGB Observation
+  scope: perception
+  risk: low
+  required_outputs:
+  - color_image
+  calibration_required: false
+  sandbox_required: false
+  real_robot_execution_allowed: false
+- id: depth_observation
+  name: Depth Observation
+  scope: perception
+  risk: medium
+  required_outputs:
+  - depth_image
+  calibration_required: true
+  sandbox_required: false
+  real_robot_execution_allowed: false
+- id: infrared_observation
+  name: Infrared Observation
+  scope: perception
+  risk: medium
+  required_outputs:
+  - infrared_image
+  calibration_required: true
+  sandbox_required: false
+  real_robot_execution_allowed: false
+- id: rgbd_scene_understanding
+  name: RGB-D Scene Understanding
+  scope: perception
+  risk: medium
+  required_outputs:
+  - color_image
+  - depth_image
+  - camera_info
+  calibration_required: true
+  sandbox_required: false
+  real_robot_execution_allowed: false
+- id: visual_navigation
+  name: Visual Navigation
+  scope: navigation
+  risk: high
+  required_outputs:
+  - color_image
+  - depth_image
+  - camera_info
+  - tf
+  calibration_required: true
+  requires_body_mount: true
+  sandbox_required: true
+  real_robot_execution_allowed: false
+- id: depth_collision_avoidance
+  name: Depth-based Collision Avoidance
+  scope: safety
+  risk: critical
+  required_outputs:
+  - depth_image
+  - camera_info
+  - tf
+  calibration_required: true
+  requires_body_mount: true
+  sandbox_required: true
+  human_approval_required: false
+  real_robot_execution_allowed: false
+- id: hand_eye_visual_servo
+  name: Hand-eye Visual Servo
+  scope: manipulation
+  risk: high
+  required_outputs:
+  - color_image
+  - depth_image
+  - tf
+  calibration_required: true
+  requires_body_mount: true
+  sandbox_required: true
+  real_robot_execution_allowed: false
+forbidden_capabilities:
+- id: depth_collision_avoidance_without_calibration
+  description: Using depth image for real robot collision avoidance without valid
+    camera intrinsic, extrinsic and TF calibration.
+  reason: uncalibrated depth safety risk
+  severity: critical
+  enforcement:
+    policy_block: true
+    sandbox_block: true
+    real_robot_block: true
+- id: visual_servo_without_hand_eye_calibration
+  description: Using camera feedback for manipulator servoing without hand-eye calibration.
+  reason: unverified camera-to-end-effector transform
+  severity: critical
+  enforcement:
+    policy_block: true
+    sandbox_block: true
+    real_robot_block: true

@@ -44,6 +44,10 @@ dev = [
     "ruff>=0.1.0",
     "mypy>=1.0.0",
     "jsonschema>=4.0.0",
+    "xacro>=2.0.0",
+    "fast-simplification>=0.1.0",
+    "trimesh>=4.0.0",
+    "yourdfpy>=0.0.60",
 ]
 
 [project.scripts]

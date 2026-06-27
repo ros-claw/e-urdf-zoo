@@ -1,0 +1,61 @@
+schema_version: e_urdf.providers.v1
+provider_interfaces:
+  state:
+    required:
+    - id: color_image
+      type: image
+      required: true
+      ros2_topic_candidates:
+      - /camera/color/image_raw
+      - /camera/camera/color/image_raw
+      - /<name>/color/image_raw
+    - id: depth_image
+      type: depth_image
+      required: true
+      ros2_topic_candidates:
+      - /camera/depth/image_rect_raw
+      - /camera/camera/depth/image_rect_raw
+      - /<name>/depth/image_rect_raw
+    - id: color_camera_info
+      type: camera_info
+      required: true
+      ros2_topic_candidates:
+      - /camera/color/camera_info
+      - /camera/camera/color/camera_info
+    - id: depth_camera_info
+      type: camera_info
+      required: true
+      ros2_topic_candidates:
+      - /camera/depth/camera_info
+      - /camera/camera/depth/camera_info
+    optional:
+    - id: infra1_image
+      type: image
+      required: false
+      ros2_topic_candidates:
+      - /camera/infra1/image_rect_raw
+    - id: infra2_image
+      type: image
+      required: false
+      ros2_topic_candidates:
+      - /camera/infra2/image_rect_raw
+  command:
+    required: []
+    optional:
+    - id: set_exposure
+      type: camera_control
+      required: false
+    - id: set_resolution
+      type: camera_control
+      required: false
+    - id: set_depth_profile
+      type: camera_control
+      required: false
+mcp:
+  recommended_servers:
+  - id: realsense-mcp
+    roles:
+    - camera_stream
+    - depth_stream
+    - camera_health
+    - calibration

@@ -1,0 +1,5 @@
+{
+  "expanded": true,
+  "wrapper": "model/model.xacro",
+  "output": "model/model.urdf"
+}

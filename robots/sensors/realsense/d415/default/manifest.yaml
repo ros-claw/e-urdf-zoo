@@ -1,0 +1,87 @@
+schema_version: e_urdf.asset.v1
+asset:
+  id: sensors/realsense/d415/default
+  name: Intel RealSense D415
+  version: 0.1.0
+  asset_type: sensor
+  category: rgbd_camera
+  vendor: Intel RealSense
+  model: D415
+  variant: default
+  status: experimental
+  description: RealSense D415 camera description imported from realsense-ros realsense2_description.
+source:
+  type: third_party_import
+  upstream_repo: https://github.com/realsenseai/realsense-ros
+  upstream_url: https://github.com/realsenseai/realsense-ros
+  upstream_branch: ros2-master
+  upstream_commit: 775b167c0dbcfe00a012e248c66a7c8379ef9fbb
+  upstream_package: realsense2_description
+  upstream_path: realsense2_description/urdf/_d415.urdf.xacro
+  imported_at: '2026-06-27T18:02:54.172260+00:00'
+  importer: e_urdf_zoo.importers.realsense_ros
+license:
+  repo_declared_license: Apache-2.0
+  upstream_model_license: Apache-2.0
+  import_blocking: false
+  display_warning: false
+  notice_file: licenses/NOTICE
+  third_party_file: licenses/THIRD_PARTY.yaml
+model:
+  primary_format: urdf
+  xacro: model/model.xacro
+  urdf: model/model.urdf
+  mujoco_urdf: model/model_mujoco.urdf
+  mjcf: null
+  usd: null
+  meshes_dir: meshes/raw
+sensor:
+  type: rgbd_camera
+  modalities:
+  - rgb
+  - depth
+  - infrared
+  has_imu: false
+  imu_modalities: []
+  requires_calibration: true
+robot:
+  morphology: sensor
+  robot_class: rgbd_camera
+  dof: 0
+semantics:
+  semantic_file: semantic.yaml
+  capabilities_file: capabilities.yaml
+  safety_file: safety.yaml
+  providers_file: providers.yaml
+  sandbox_file: sandbox.yaml
+  calibration_defaults_file: calibration_defaults.yaml
+  prompts_dir: prompts/
+runtime_policy:
+  attachable_to_body: true
+  requires_mount_frame: true
+  calibration_required: true
+  real_robot_provider_required: true
+  sandbox_supported: true
+  real_robot_execution_allowed: false
+  sandbox_required: true
+  provider_required: true
+  low_speed_first_run_required: true
+  fault_monitor_required: true
+quality:
+  validation_status: experimental
+  xacro_expansion: passed
+  urdf_parse: passed
+  mesh_resolution: passed
+  mujoco_urdf_parse: not_tested
+  safety_review: generated
+checksums:
+  file: checksums.json
+tags:
+- realsense
+- rgbd
+- depth-camera
+- ros2
+- xacro
+- imported-from-realsense-ros
+aliases:
+  realsense-d415: sensors/realsense/d415/default

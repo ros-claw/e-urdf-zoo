@@ -1,0 +1,35 @@
+schema_version: e_urdf.sandbox.v1
+engines:
+  ros2:
+    supported: true
+    model_path: model/model.urdf
+    status: validated_by_xacro
+  rviz:
+    supported: true
+    model_path: model/model.urdf
+    status: validated_by_xacro
+  mujoco:
+    supported: true
+    model_path: model/model_mujoco.urdf
+    status: experimental
+    notes:
+    - MuJoCo can load the geometry and fixed frames, but RGB-D sensor simulation requires
+      engine-specific configuration.
+  isaac:
+    supported: false
+    status: not_provided_in_realsense_ros
+    notes:
+    - Isaac Sim RealSense USD assets should be added separately as reference-only
+      USD assets.
+validation:
+  required_checks:
+  - xacro_expand
+  - urdf_parse
+  - mesh_exists
+  - fixed_frame_tree
+  - optical_frame_convention
+  - provider_interfaces_present
+  - safety_yaml_complete
+default_test_poses:
+- id: nominal_mount
+  description: Camera mounted at default origin facing forward

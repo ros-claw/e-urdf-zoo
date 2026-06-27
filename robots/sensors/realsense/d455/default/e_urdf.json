@@ -1,0 +1,20 @@
+{
+  "schema_version": "e_urdf.compat.v1",
+  "asset_id": "sensors/realsense/d455/default",
+  "asset_type": "sensor",
+  "model": {
+    "urdf": "model/model.urdf",
+    "xacro": "model/model.xacro",
+    "mujoco_urdf": "model/model_mujoco.urdf"
+  },
+  "semantic": "semantic.yaml",
+  "capabilities": "capabilities.yaml",
+  "safety": "safety.yaml",
+  "providers": "providers.yaml",
+  "sandbox": "sandbox.yaml",
+  "prompts": {
+    "system": "prompts/system.md",
+    "tools_usage": "prompts/tools_usage.md",
+    "safety": "prompts/safety.md"
+  }
+}

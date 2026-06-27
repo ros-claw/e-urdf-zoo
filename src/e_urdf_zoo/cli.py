@@ -13,11 +13,10 @@ from rich.table import Table
 
 from . import (
     __version__,
-    get_robot_info,
-    list_robots,
     load_embodiment,
 )
 from .importers.dex_urdf import DexUrdfImporter
+from .importers.realsense_ros import RealSenseRosImporter
 from .index import AssetIndex
 from .loader import AssetLoader
 from .schemas import ValidationStatus
@@ -99,9 +98,7 @@ def cmd_info(args: argparse.Namespace) -> int:
         console.print(f"Model: {manifest.asset.model}")
         console.print(f"Variant: {manifest.asset.variant}")
         console.print(f"Description: {manifest.asset.description or 'N/A'}")
-        console.print(
-            f"\nSandbox required: {manifest.runtime_policy.sandbox_required}"
-        )
+        console.print(f"\nSandbox required: {manifest.runtime_policy.sandbox_required}")
         console.print(
             f"Real robot execution allowed: "
             f"{manifest.runtime_policy.real_robot_execution_allowed}"
@@ -124,7 +121,7 @@ def cmd_info(args: argparse.Namespace) -> int:
     console.print(f"\nAsset Location: {asset.base_path}")
 
     if args.show_prompts:
-        console.print(f"\n[bold]SYSTEM PROMPT (first 500 chars)[/bold]\n")
+        console.print("\n[bold]SYSTEM PROMPT (first 500 chars)[/bold]\n")
         console.print(asset.system_prompt[:500] + "...")
 
     return 0
@@ -175,9 +172,7 @@ def cmd_validate(args: argparse.Namespace) -> int:
                 ValidationStatus.PASS_WITH_WARNINGS: "yellow",
                 ValidationStatus.FAIL: "red",
             }.get(result.status, "white")
-            msg_summary = "\n".join(
-                f"{m.level}: {m.message}" for m in result.messages
-            )
+            msg_summary = "\n".join(f"{m.level}: {m.message}" for m in result.messages)
             table.add_row(
                 filename,
                 f"[{status_color}]{result.status.value}[/{status_color}]",
@@ -189,7 +184,9 @@ def cmd_validate(args: argparse.Namespace) -> int:
         console.print("\n[bold]Messages:[/bold]")
         for msg in report.messages:
             level_color = "yellow" if msg.get("level") == "warning" else "red"
-            console.print(f"  [{level_color}]{msg['level']}:[/{level_color}] {msg['message']}")
+            console.print(
+                f"  [{level_color}]{msg['level']}:[/{level_color}] {msg['message']}"
+            )
 
     return 0 if report.overall != ValidationStatus.FAIL.value else 1
 
@@ -199,7 +196,7 @@ def cmd_index(args: argparse.Namespace) -> int:
     if args.index_command == "build":
         index = AssetIndex().build()
         paths = index.save(output_dir=args.output)
-        console.print(f"[green]Index built[/green]:")
+        console.print("[green]Index built[/green]:")
         console.print(f"  JSON: {paths['json']}")
         console.print(f"  YAML: {paths['yaml']}")
         return 0
@@ -250,8 +247,48 @@ def cmd_import_dex_urdf(args: argparse.Namespace) -> int:
     return 0 if not failed else 1
 
 
+def cmd_import_realsense(args: argparse.Namespace) -> int:
+    """Bulk import realsense-ros sensor assets."""
+    importer = RealSenseRosImporter(
+        source_dir=args.source,
+        output_dir=args.output,
+        copy_meshes=args.copy_meshes,
+        expand_xacro=args.expand_xacro,
+        generate_mujoco_urdf=args.generate_mujoco_urdf,
+        validate=args.validate,
+    )
+    if args.model:
+        output = args.output / args.model / "default"
+        results = [importer.import_one(args.model, output)]
+    else:
+        results = importer.import_all()
+
+    success = [r for r in results if r.xacro_expanded and r.urdf_valid]
+    warned = [r for r in results if r.warnings]
+    failed = [r for r in results if not (r.xacro_expanded and r.urdf_valid)]
+
+    console.print(f"[green]Imported {len(success)} assets[/green]")
+    if warned:
+        console.print(f"[yellow]{len(warned)} assets imported with warnings[/yellow]")
+    if failed:
+        console.print(f"[red]{len(failed)} assets failed[/red]")
+
+    for result in results:
+        ok = result.xacro_expanded and result.urdf_valid
+        color = "green" if ok and not result.warnings else "yellow" if ok else "red"
+        console.print(
+            f"  [{color}]{result.asset_id}[/{color}] "
+            f"xacro={result.xacro_expanded} urdf={result.urdf_valid} "
+            f"meshes={result.meshes_copied}"
+        )
+        for warning in result.warnings:
+            console.print(f"    [yellow]warning: {warning}[/yellow]")
+
+    return 0 if not failed else 1
+
+
 def main() -> int:
-    """Main entry point."""
+    """Run the e-URDF-Zoo CLI."""
     parser = argparse.ArgumentParser(
         prog="e-urdf-zoo",
         description="e-URDF-Zoo: The Official Device Driver Hub for ROSClaw",
@@ -291,9 +328,7 @@ def main() -> int:
     info_parser.set_defaults(func=cmd_info)
 
     # Validate command
-    validate_parser = subparsers.add_parser(
-        "validate", help="Validate an asset bundle"
-    )
+    validate_parser = subparsers.add_parser("validate", help="Validate an asset bundle")
     validate_parser.add_argument(
         "target",
         help="Asset ID or path to asset directory/e_urdf.json",
@@ -334,12 +369,8 @@ def main() -> int:
     import_urdf.add_argument("--output", type=Path, required=True)
     import_urdf.set_defaults(func=cmd_import_urdf)
 
-    import_dex = import_sub.add_parser(
-        "dex-urdf", help="Bulk import dexsuite/dex-urdf"
-    )
-    import_dex.add_argument(
-        "--source", required=True, help="Path to dex-urdf checkout"
-    )
+    import_dex = import_sub.add_parser("dex-urdf", help="Bulk import dexsuite/dex-urdf")
+    import_dex.add_argument("--source", required=True, help="Path to dex-urdf checkout")
     import_dex.add_argument(
         "--output", type=Path, required=True, help="Output directory"
     )
@@ -350,6 +381,51 @@ def main() -> int:
         "--copy-assets", action="store_true", help="Copy meshes into the zoo"
     )
     import_dex.set_defaults(func=cmd_import_dex_urdf)
+
+    import_realsense = import_sub.add_parser(
+        "realsense-ros", help="Bulk import realsense-ros sensor descriptions"
+    )
+    import_realsense.add_argument(
+        "--source", required=True, help="Path to realsense-ros checkout"
+    )
+    import_realsense.add_argument(
+        "--output", type=Path, required=True, help="Output directory"
+    )
+    import_realsense.add_argument("--model", help="Import a single model (e.g., d455)")
+    import_realsense.add_argument(
+        "--copy-meshes", action="store_true", default=True, help="Copy meshes"
+    )
+    import_realsense.add_argument(
+        "--expand-xacro", action="store_true", default=True, help="Expand wrapper xacro"
+    )
+    import_realsense.add_argument(
+        "--generate-mujoco-urdf",
+        action="store_true",
+        default=True,
+        help="Generate MuJoCo-friendly URDF",
+    )
+    import_realsense.add_argument(
+        "--validate", action="store_true", default=True, help="Run validation reports"
+    )
+    import_realsense.add_argument(
+        "--no-copy-meshes",
+        dest="copy_meshes",
+        action="store_false",
+        help="Skip mesh copy",
+    )
+    import_realsense.add_argument(
+        "--no-expand-xacro",
+        dest="expand_xacro",
+        action="store_false",
+        help="Skip xacro expansion",
+    )
+    import_realsense.add_argument(
+        "--no-generate-mujoco-urdf",
+        dest="generate_mujoco_urdf",
+        action="store_false",
+        help="Skip MuJoCo URDF generation",
+    )
+    import_realsense.set_defaults(func=cmd_import_realsense)
 
     args = parser.parse_args()
 

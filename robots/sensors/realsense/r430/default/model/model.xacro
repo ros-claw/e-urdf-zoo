@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot name="realsense_r430_standalone" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="../source/xacro/_materials.urdf.xacro"/>
+  <xacro:include filename="../source/xacro/_usb_plug.urdf.xacro"/>
+  <xacro:include filename="../source/xacro/_r430.urdf.xacro"/>
+
+  <link name="realsense_r430_mount"/>
+
+  <xacro:sensor_r430
+    parent="realsense_r430_mount"
+    name="camera"
+    use_nominal_extrinsics="true">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:sensor_r430>
+
+</robot>

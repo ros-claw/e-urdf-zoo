@@ -1,0 +1,37 @@
+schema_version: e_urdf.semantic.v1
+identity:
+  asset_id: sensors/realsense/r430/default
+  morphology: sensor
+  robot_class: rgbd_camera
+  vendor: Intel RealSense
+  model: R430
+frames:
+  root: realsense_r430_mount
+  body: camera_link
+  depth_frame: camera_depth_frame
+  depth_optical_frame: camera_depth_optical_frame
+  infra_frames:
+  - camera_infra1_frame
+  - camera_infra2_frame
+mounting:
+  attachable: true
+  compatible_mounts:
+  - humanoid/head
+  - humanoid/torso
+  - mobile_base/front
+  - manipulator/wrist
+  required_calibration:
+  - extrinsics
+  - intrinsics
+  - time_sync
+modalities:
+- depth
+- infrared
+roles:
+- visual_perception
+- depth_perception
+- obstacle_detection
+- visual_navigation
+- object_detection
+- scene_reconstruction
+- hand_eye_calibration

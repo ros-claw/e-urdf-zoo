@@ -1,0 +1,7 @@
+macro_file: _d435i.urdf.xacro
+shared_files:
+- _materials.urdf.xacro
+- _usb_plug.urdf.xacro
+extra_files:
+- _d435.urdf.xacro
+- _d435i_imu_modules.urdf.xacro

@@ -1,0 +1,13 @@
+upstream:
+  type: third_party_import
+  upstream_repo: https://github.com/realsenseai/realsense-ros
+  upstream_url: https://github.com/realsenseai/realsense-ros
+  upstream_branch: ros2-master
+  upstream_commit: 775b167c0dbcfe00a012e248c66a7c8379ef9fbb
+  upstream_package: realsense2_description
+  upstream_path: realsense2_description/urdf
+  imported_at: '2026-06-27T18:02:54.172260+00:00'
+  importer: e_urdf_zoo.importers.realsense_ros
+license: Apache-2.0
+notes:
+- See upstream NOTICE.md for full attribution.

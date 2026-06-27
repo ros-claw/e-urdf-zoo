@@ -1,0 +1,29 @@
+schema_version: e_urdf.calibration_defaults.v1
+calibration:
+  status: default
+  confidence: 0.0
+intrinsics:
+  color:
+    status: missing
+    source: provider_required
+  depth:
+    status: missing
+    source: provider_required
+extrinsics:
+  camera_to_mount:
+    status: nominal
+    source: expanded_urdf
+  camera_to_body:
+    status: missing
+    source: body_attach_required
+depth:
+  depth_scale:
+    status: provider_required
+  min_valid_distance_m: null
+  max_reliable_distance_m: null
+time_sync:
+  status: unknown
+  required_for:
+  - visual_navigation
+  - visual_servo
+  - collision_avoidance

@@ -1,6 +1,6 @@
 schema_version: e_urdf.index.v1
 zoo_path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots
-count: 79
+count: 88
 entries:
 - id: agilex_piper
   name: Agilex Piper
@@ -450,6 +450,87 @@ entries:
   version: 0.1.0-skeleton
   is_legacy: true
   aliases: []
+- id: sensors/realsense/d405/default
+  name: Intel RealSense D405
+  category: rgbd_camera
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/sensors/realsense/d405/default
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases:
+  - realsense-d405
+- id: sensors/realsense/d415/default
+  name: Intel RealSense D415
+  category: rgbd_camera
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/sensors/realsense/d415/default
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases:
+  - realsense-d415
+- id: sensors/realsense/d435/default
+  name: Intel RealSense D435
+  category: rgbd_camera
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/sensors/realsense/d435/default
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases:
+  - realsense-d435
+- id: sensors/realsense/d435i/default
+  name: Intel RealSense D435I
+  category: rgbd_camera
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/sensors/realsense/d435i/default
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases:
+  - realsense-d435i
+- id: sensors/realsense/d436/default
+  name: Intel RealSense D436
+  category: rgbd_camera
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/sensors/realsense/d436/default
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases:
+  - realsense-d436
+- id: sensors/realsense/d455/default
+  name: Intel RealSense D455
+  category: rgbd_camera
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/sensors/realsense/d455/default
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases:
+  - realsense-d455
+- id: sensors/realsense/d585/default
+  name: Intel RealSense D585
+  category: rgbd_camera
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/sensors/realsense/d585/default
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases:
+  - realsense-d585
+- id: sensors/realsense/r410/default
+  name: Intel RealSense R410
+  category: rgbd_camera
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/sensors/realsense/r410/default
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases:
+  - realsense-r410
+- id: sensors/realsense/r430/default
+  name: Intel RealSense R430
+  category: rgbd_camera
+  path: /home/ubuntu/rosclaw/rosclaw/e-urdf-zoo/robots/sensors/realsense/r430/default
+  status: experimental
+  version: 0.1.0
+  is_legacy: false
+  aliases:
+  - realsense-r430
 - id: shadow_dexee
   name: Shadow Dexee
   category: gripper
@@ -634,4 +715,13 @@ entries:
   version: 0.1.0-skeleton
   is_legacy: true
   aliases: []
-aliases: {}
+aliases:
+  realsense-d405: sensors/realsense/d405/default
+  realsense-d415: sensors/realsense/d415/default
+  realsense-d435: sensors/realsense/d435/default
+  realsense-d435i: sensors/realsense/d435i/default
+  realsense-d436: sensors/realsense/d436/default
+  realsense-d455: sensors/realsense/d455/default
+  realsense-d585: sensors/realsense/d585/default
+  realsense-r410: sensors/realsense/r410/default
+  realsense-r430: sensors/realsense/r430/default

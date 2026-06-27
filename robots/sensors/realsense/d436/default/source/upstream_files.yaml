@@ -1,0 +1,5 @@
+macro_file: _d436.urdf.xacro
+shared_files:
+- _materials.urdf.xacro
+- _usb_plug.urdf.xacro
+extra_files: []

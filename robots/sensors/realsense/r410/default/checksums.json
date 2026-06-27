@@ -1,0 +1,32 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "README.md": "0ec1bb8c00722ef2b1d683440f1870e11d30021f407398c23712e32bbedbb2fc",
+    "calibration_defaults.yaml": "4475ced9cb797d42b6e5f94b8ba016d9269aa753c446cabd9e2d010bf23f6625",
+    "capabilities.yaml": "5223310702cd853a4c74f3379fefd27fa15a111ae29fd61f1af7cabad71d908d",
+    "checksums.json": "1ca9ea60fd19c49c662a182b448caffeb89305c3374d70cdec6df6e8c65d6bba",
+    "e_urdf.json": "a6f50e5d146e4e4a67ddfd5cc12539f7767d3570bea96d24ae81e7701753f79c",
+    "licenses/NOTICE": "692f9db8a41212dbe0edef92ca008bb0cafd89f794ee1a050224085d9cd6d0bb",
+    "licenses/THIRD_PARTY.yaml": "224eaa39fee548dde0588bb73981cad3a2b39d92860d9a4866ca65db90043653",
+    "manifest.yaml": "371928a888830f94b5c411822d5663129055becd639679d0b699dff6a9f396e0",
+    "model/model.urdf": "b4779997a8e58e1d9abc26d627bdd1ce2c57bcf8dc4e3c6d8f6a9fa49cacbd87",
+    "model/model.xacro": "ada7c881db412d197e30c55f0819c475a344bc82314eec87794034c8f01504fa",
+    "model/model_mujoco.urdf": "f9a032cc96b8a3a0ac745065ec4438606b0a79c0436a11d94c2d5ff08ef8aef6",
+    "prompts/safety.md": "0135af17a065e71ea2fe9bef761736b59ef33dc03676aead9808f9bd6b217a62",
+    "prompts/system.md": "75c40d328a639d03f154e80257d80132703a2b8bd20fff7d23ed03a9fb2ffe8d",
+    "prompts/tools_usage.md": "cdedeb88b407889b8eb81958f32acef68afd0f69ec26a690083d59d4c2696082",
+    "providers.yaml": "03541b9382f185df4581c4b0124bf06d66deaf0628ecd9e3d4aff44e9a20e7d3",
+    "safety.yaml": "93fe02836b61f6692af1b239ff497a4621653122e2fd568b509ed5b4fb507ff1",
+    "sandbox.yaml": "d061ee7172554b1ff4fd3020f68a1aec83780875ddf4c2fd4e7a3523e3e249dd",
+    "semantic.yaml": "b634e1200a24f7ea26c57fe132bd72eb48f7c44a1b6ecd4f9ff1a540ea7e7220",
+    "source/upstream_commit.txt": "720ec4439b7e3933d67f7a472a5d22a201a1dd8d61f0268ab0e220cd7d315968",
+    "source/upstream_files.yaml": "95927d71ba429c080d2f9b605ae784b3474d2737596ee7f918558b100aeb89fc",
+    "source/xacro/_materials.urdf.xacro": "cd8a4b4ab488b57855318e68226329a80310ee45e3aa489dd75222f2c607d005",
+    "source/xacro/_r410.urdf.xacro": "6b3193266fe52e1158748e560a6754efbb82d7e63e5be6f895e5baccf2a2978e",
+    "source/xacro/_usb_plug.urdf.xacro": "22531ecdc0b09aa3ab4408641432617b000618933e98dc2f488ac31b88c8ad79",
+    "validation/mesh_report.json": "6a8c3f81f0dcfe386c0037581ddd46474dbaaa4b494c6aaf4e982fff47371084",
+    "validation/mujoco_report.json": "044d64a48b751ba27c18193ef639446650c728dc3546675e770d3f87e9d08594",
+    "validation/urdf_parse_report.json": "61552f381b37e30acff87ec1c74568dd21d2911c5528a94552fee9adca8c7e0a",
+    "validation/xacro_expand_report.json": "0d2ad934290b7e40c7dd37bf7690fd1cd6db277b125b35381d58a89aa25847a6"
+  }
+}
