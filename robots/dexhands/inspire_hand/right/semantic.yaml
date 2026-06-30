@@ -94,5 +94,38 @@ groups:
     - pinky_finger
     source: heuristic
     confidence: 0.6
+actuators:
+  # Firmware-level DOF mapping for the RH56 Modbus RTU interface.
+  # Raw angle range is 0-2000 where 0 = closed/bent and 2000 = open/extended.
+  little:
+    index: 0
+    raw_range: [0, 2000]
+    semantic_group: pinky
+  ring:
+    index: 1
+    raw_range: [0, 2000]
+    semantic_group: ring
+  middle:
+    index: 2
+    raw_range: [0, 2000]
+    semantic_group: middle
+  index:
+    index: 3
+    raw_range: [0, 2000]
+    semantic_group: index
+  thumb:
+    index: 4
+    raw_range: [0, 2000]
+    semantic_group: thumb
+  thumb_rot:
+    index: 5
+    raw_range: [0, 2000]
+    semantic_group: thumb
+    note: thumb rotation / adduction DOF
 notes:
 - Semantic groups were inferred from URDF link names.
+- URDF expected OK contact near pose [650, 450, 1000] but real contact observed
+  near raw pose [992, 995, 991]; use body-cognition sim2real deltas instead of
+  raw URDF pose for real-robot OK contact.
+- Final OK gesture should move thumb and index together starting from the one pose
+  (index extended, thumb closed) to obtain balanced contact.

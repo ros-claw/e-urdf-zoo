@@ -18,7 +18,33 @@ interfaces:
   required: true
   ros1_topic: /diagnostics
   ros2_topic: /diagnostics
+- id: force_feedback
+  category: sensor
+  description: Signed FORCE_ACT per DOF over Modbus RTU
+  required: false
+  transport: modbus_rtu
+  port: /dev/ttyUSB0
+  baudrate: 115200
+  slave_id: 2
+  registers:
+    force_actual: 0x062E
+    current: 0x063A
+    status: 0x064C
+    error: 0x0646
+    temperature: 0x0652
+  units: grams_force
+  notes:
+  - FORCE_ACT is the reliable static contact signal
+  - CURRENT is not reliable for static contact
+- id: hand_state
+  category: sensor
+  description: Aggregated angle/force/current/status/error/temperature state
+  required: false
+  transport: modbus_rtu
 recommended_mcp_servers:
 - name: ros-mcp-server
   purpose: Bridge ROS topics/services to the agent
   required_for_real_robot: true
+- name: rosclaw-inspire-rh56
+  purpose: Direct Modbus RTU / CAN control and telemetry for the RH56 hand
+  required_for_real_robot: false

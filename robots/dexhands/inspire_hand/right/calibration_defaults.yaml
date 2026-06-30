@@ -7,4 +7,38 @@ position_limits_rad: {}
 force_calibration:
   sensor_zero_n: 0.0
   contact_threshold_n: 0.5
+  # RH56-specific FORCE_ACT calibration in grams-force
+  force_baseline_required: true
+  units: grams_force
+  contact_windows_g:
+    thumb:
+      desired_min: 60
+      desired_max: 180
+      hard: 250
+      emergency: 350
+    index:
+      desired_min: 80
+      desired_max: 200
+      hard: 250
+      emergency: 350
+    middle:
+      desired_min: 80
+      desired_max: 200
+      hard: 250
+      emergency: 350
+    ring:
+      desired_min: 80
+      desired_max: 200
+      hard: 250
+      emergency: 350
+    little:
+      desired_min: 80
+      desired_max: 200
+      hard: 250
+      emergency: 350
+    thumb_rot:
+      desired_min: 40
+      desired_max: 160
+      hard: 250
+      emergency: 350
 finger_clearance_mm: {}

@@ -2,13 +2,16 @@ schema_version: e_urdf.asset.v1
 asset:
   id: dexhands/inspire_hand/right
   name: Inspire Hand (Right)
-  version: 0.1.0
+  version: 0.2.0
   status: experimental
   category: dexhands
   vendor: Inspire Robots
   model: inspire_hand
   variant: right
-  description: Imported inspire_hand from dexsuite/dex-urdf
+  description: |
+    Imported inspire_hand from dexsuite/dex-urdf, enhanced with RH56 force-feedback
+    metadata for the Modbus RTU / RS485 runtime. Includes per-DOF contact windows,
+    FORCE_ACT primary contact signal, actuator mapping, and sim2real warnings.
 source:
   type: third_party_import
   upstream_repo: https://github.com/dexsuite/dex-urdf
@@ -42,3 +45,6 @@ runtime_policy:
   calibration_required: true
   low_speed_first_run_required: true
   fault_monitor_required: true
+notes:
+- URDF OK contact pose does not match real hardware; see safety.yaml force_feedback/contact_warnings.
+- Force-closed-loop skills must use a calibrated FORCE_ACT baseline and the thumb+index together path.
