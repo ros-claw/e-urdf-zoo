@@ -12,6 +12,26 @@ capabilities:
   risk: medium
   sandbox_required: true
   real_robot_execution_allowed: false
+- id: ok_gesture_contact_aware
+  name: OK Gesture with Force-Closed-Loop Control
+  scope: manipulation
+  risk: medium
+  sandbox_required: true
+  real_robot_execution_allowed: false
+  required_sensors:
+  - force_feedback
+  notes:
+  - Uses FORCE_ACT as the primary static contact signal
+  - Requires calibrated open-palm baseline
+  - Final OK pose must move thumb and index together from the one pose
+- id: force_baseline_calibration
+  name: Open-Palm Force Baseline Calibration
+  scope: calibration
+  risk: low
+  sandbox_required: false
+  real_robot_execution_allowed: false
+  notes:
+  - Collects FORCE_ACT offsets for all 6 DOFs in the open-palm posture
 forbidden_capabilities:
 - id: forceful_grasp_without_current_limit
   description: Forceful grasping without active current/torque limit
@@ -28,4 +48,12 @@ forbidden_capabilities:
   enforcement:
     policy_block: true
     sandbox_block: true
+    real_robot_block: true
+- id: static_contact_using_current_only
+  description: Rely on CURRENT for static contact detection
+  reason: CURRENT drops to near zero at static contact on RH56
+  severity: high
+  enforcement:
+    policy_block: true
+    sandbox_block: false
     real_robot_block: true

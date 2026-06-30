@@ -18,6 +18,61 @@ runtime_monitors:
   watch_velocity_bounds: true
   watch_force: true
   emergency_stop_on_fault: true
+force_feedback:
+  primary_contact_signal: FORCE_ACT
+  current_static_contact_reliable: false
+  force_baseline_required: true
+  units: grams_force
+  contact_windows_g:
+    thumb:
+      desired_min: 60
+      desired_max: 180
+      hard: 250
+      emergency: 350
+    index:
+      desired_min: 80
+      desired_max: 200
+      hard: 250
+      emergency: 350
+    middle:
+      desired_min: 80
+      desired_max: 200
+      hard: 250
+      emergency: 350
+    ring:
+      desired_min: 80
+      desired_max: 200
+      hard: 250
+      emergency: 350
+    little:
+      desired_min: 80
+      desired_max: 200
+      hard: 250
+      emergency: 350
+    thumb_rot:
+      desired_min: 40
+      desired_max: 160
+      hard: 250
+      emergency: 350
+  status_bits:
+    0x01: running
+    0x02: in_position
+    0x04: current_protection
+    0x08: force_protection
+    0x10: temp_protection
+  contact_warnings:
+  - id: index_force_decay_path_dependent
+    message: Index force can decay by ~40 g when using thumb-first approach; use thumb+index together from the one pose
+    severity: warning
+  - id: thumb_blocks_index_from_open_palm
+    message: Moving thumb and index together from open palm causes thumb-only or over-contact; start from one pose
+    severity: warning
+  - id: hard_contact_limit_250g
+    message: Net force above 250 g is considered over-contact and should trigger backoff
+    severity: critical
+  - id: sim2real_pose_mismatch
+    message: URDF expected OK contact near 650/450/1000 but real contact is near 992/995/991 raw pose
+    severity: warning
 trajectory_policy:
   require_sandbox_first: true
   require_low_speed_first: true
@@ -38,6 +93,15 @@ blocked_actions:
   reason: Real robot execution requires clearance calibration
   scope:
   - real_robot
+- id: thumb_index_together_from_open_palm
+  reason: Causes thumb-only contact or over-contact; use one pose as the start
+  scope:
+  - real_robot
+  - sandbox
+- id: static_contact_without_force_baseline
+  reason: FORCE_ACT must be baseline-subtracted before contact classification
+  scope:
+  - real_robot
 first_real_robot_protocol:
   required: true
   steps:
@@ -45,4 +109,5 @@ first_real_robot_protocol:
   - Upload clearance calibration
   - Run low-speed range-of-motion check
   - Enable current/torque monitors
+  - Calibrate open-palm FORCE_ACT baseline
   - Human-in-the-loop confirmation per pose
